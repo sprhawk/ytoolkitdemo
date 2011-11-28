@@ -12,10 +12,12 @@ How to build it ?
 -----------------
 1. Clone it to your local.
 2. Clone the submodule using
+
 ```
     $ git submodule init
     $ git submodule update
 ```
+
    submodule includes: [ytoolkit], [SBJson], and [ASIHTTPRequest]
 
 [ASIHTTPRequest]: https://github.com/pokeb/asi-http-request.git
