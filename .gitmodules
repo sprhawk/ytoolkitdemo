@@ -1,6 +1,6 @@
 [submodule "ytoolkit"]
 	path = ytoolkit
-	url = https://sprhawk@github.com/sprhawk/ytoolkit.git
+	url = https://github.com/sprhawk/ytoolkit.git
 [submodule "externals/asi-http-request"]
 	path = externals/asi-http-request
 	url = https://github.com/pokeb/asi-http-request.git
