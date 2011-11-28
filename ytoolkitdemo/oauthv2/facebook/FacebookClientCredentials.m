@@ -27,6 +27,7 @@
 
 #import "FacebookClientCredentials.h"
 
+#warning Need to be filled out in your credentials!!!
 NSString * const kFacebookAppID = @"your key";
 NSString * const kFacebookAppSecret = @"your secret";
 NSString * const kFacebookAppCallbackURL = @"your callback url";

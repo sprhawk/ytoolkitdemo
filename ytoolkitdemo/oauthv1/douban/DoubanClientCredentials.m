@@ -27,6 +27,7 @@
 
 #import "DoubanClientCredentials.h"
 
+#warning Need to be filled out in your credentials!!!
 NSString * const kDoubanConsumerKey = @"your key";
 NSString * const kDoubanConsumerSecretKey = @"your secret";
 NSString * const kDoubanRealm = @"www.douban.com";

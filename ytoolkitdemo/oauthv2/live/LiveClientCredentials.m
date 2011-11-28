@@ -26,6 +26,7 @@
 
 #import "LiveClientCredentials.h"
 
+#warning Need to be filled out in your credentials!!!
 NSString * kLiveClientId = @"your client id";
 
 NSString * kLiveClientSecret = @"your secret";

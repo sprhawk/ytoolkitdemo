@@ -28,6 +28,7 @@
 #import <ytoolkit/NSString+YHTTPURLString.h>
 #import <ytoolkit/NSDictionary+YHTTPURLDictionary.h>
 
+#warning Need to be filled out in your credentials!!!
 NSString * const kQQweiboApiKey = @"your key";
 NSString * const kQQweiboApiSecret = @"your secret";
 

@@ -26,5 +26,6 @@
 
 #import "TwitterClientCredentials.h"
 
+#warning Need to be filled out in your credentials!!!
 NSString * const kTwitterConsumerKey = @"your key";
 NSString * const kTwitterConsumerSecretKey = @"your secret";

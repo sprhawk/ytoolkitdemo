@@ -26,6 +26,7 @@
 
 #import "SinaweiboClientCredentials.h"
 
+#warning Need to be filled out in your credentials!!!
 NSString * const kSinaweiboApiKey = @"your key";
 NSString * const kSinaweiboApiSecret = @"your secret";
 NSString * const kSinaweiboApiCallbackURL = @"http://ytoolkitdemo.yang.me";

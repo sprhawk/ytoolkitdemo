@@ -26,5 +26,6 @@
 
 #import "FlickrClientCredentials.h"
 
+#warning Need to be filled out in your credentials!!!
 NSString * const kFlickrAppKey = @"your key";
 NSString * const kFlickrAppSecret = @"your secret";
