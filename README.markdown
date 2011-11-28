@@ -6,6 +6,25 @@ What is it?
 
 This project is just a demo of usage of [ytoolkit] project, see the project for details.
 
+It includes:
+
+* [Twitter] authentication and data retrieving (OAuth 1.0)
+* [Douban] authentication and data retrieving (OAuth 1.0)
+* [QQ weibo] authentication and data retrieving (OAuth 1.0)
+* [Flickr] not finished (OAuth 1.0)
+* [Sina Weibo] authentication and data retrieving (OAuth 2.0 only, OAuth 1.0 not finished, cannot find the api doc for entering the last PIN code)
+* [Facebook] authentication and data retieving (OAuth 2.0)
+* [live] not finished.
+
+[Twitter]: http://www.twitter.com
+[Douban]: http://www.douban.com
+[QQ weibo]: http://t.qq.com
+[Flickr]: http://www.flickr.com
+[Sina Weibo]: http://www.weibo.com
+[Facebook]: http://www.facebook.com
+[live]: http://www.live.com
+
+
 [ytoolkit]: https://github.com/sprhawk/ytoolkit
 
 How to build it ?
