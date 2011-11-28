@@ -1,0 +1,1058 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9AABE9FE147F8ED300A678B3 /* libybase64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AABE95F147F8ADF00A678B3 /* libybase64.a */; };
+		9AABE9FF147F8ED300A678B3 /* libybase64additions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AABE961147F8ADF00A678B3 /* libybase64additions.a */; };
+		9AABEA00147F8ED300A678B3 /* libycocoaadditions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AABE963147F8ADF00A678B3 /* libycocoaadditions.a */; };
+		9AABEA01147F8ED300A678B3 /* libyoauth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AABE965147F8ADF00A678B3 /* libyoauth.a */; };
+		9AABEA02147F8ED300A678B3 /* libyoauthadditions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AABE967147F8ADF00A678B3 /* libyoauthadditions.a */; };
+		9AABEA39147FB37C00A678B3 /* TwitterClientCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABEA38147FB37C00A678B3 /* TwitterClientCredentials.m */; };
+		9AABEA3C147FB3FD00A678B3 /* TwitterTimelineListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABEA3B147FB3FD00A678B3 /* TwitterTimelineListViewController.m */; };
+		9AC0C4D6147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C4D4147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m */; };
+		9AC0C4D7147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC0C4D5147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.xib */; };
+		9AC0C549147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C548147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.m */; };
+		9AC0C568147F3EBD008E5AD5 /* DemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C567147F3EBD008E5AD5 /* DemoListViewController.m */; };
+		9AC0C56B147F5F83008E5AD5 /* Doubanv1MeesageStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C56A147F5F82008E5AD5 /* Doubanv1MeesageStreamViewController.m */; };
+		9AC0C56E147F69A1008E5AD5 /* DoubanClientCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C56D147F69A1008E5AD5 /* DoubanClientCredentials.m */; };
+		9AC0C5D6147F8210008E5AD5 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC0C5D3147F81FC008E5AD5 /* libsbjson-ios.a */; };
+		9AC0FC9B147FE93000E020AF /* TwitterLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FC99147FE93000E020AF /* TwitterLoginViewController.m */; };
+		9AC0FC9C147FE93000E020AF /* TwitterLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC0FC9A147FE93000E020AF /* TwitterLoginViewController.xib */; };
+		9AC0FCA61480B30100E020AF /* FacebookClientCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCA51480B30100E020AF /* FacebookClientCredentials.m */; };
+		9AC0FCA91480B3E600E020AF /* FacebookNewsFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCA81480B3E600E020AF /* FacebookNewsFeedViewController.m */; };
+		9AC0FCAC1480BD2300E020AF /* FacebookLoginSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCAB1480BD2300E020AF /* FacebookLoginSelectorViewController.m */; };
+		9AC0FCB51481146300E020AF /* FacebookLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCB31481146200E020AF /* FacebookLoginViewController.m */; };
+		9AC0FCB61481146300E020AF /* FacebookLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC0FCB41481146300E020AF /* FacebookLoginViewController.xib */; };
+		9AC0FCEC1481485E00E020AF /* OAuthv1BaseFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCEB1481485E00E020AF /* OAuthv1BaseFeedViewController.m */; };
+		9AC0FCF21481494200E020AF /* OAuthv1BaseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCF11481494100E020AF /* OAuthv1BaseLoginViewController.m */; };
+		9AC0FCF61481541500E020AF /* LiveClientCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCF51481541500E020AF /* LiveClientCredentials.m */; };
+		9AC0FCFA14815F5C00E020AF /* OAuthBaseFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCF914815F5B00E020AF /* OAuthBaseFeedViewController.m */; };
+		9AC0FCFD148160B700E020AF /* OAuthv2BaseFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCFC148160B600E020AF /* OAuthv2BaseFeedViewController.m */; };
+		9AC0FD001481615800E020AF /* OAuthv2BaseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCFF1481615700E020AF /* OAuthv2BaseLoginViewController.m */; };
+		9AE98C52147D4FDE00D4488F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98C51147D4FDE00D4488F /* UIKit.framework */; };
+		9AE98C54147D4FDE00D4488F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98C53147D4FDE00D4488F /* Foundation.framework */; };
+		9AE98C56147D4FDE00D4488F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98C55147D4FDE00D4488F /* CoreGraphics.framework */; };
+		9AE98C5C147D4FDE00D4488F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE98C5A147D4FDE00D4488F /* InfoPlist.strings */; };
+		9AE98C5E147D4FDE00D4488F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE98C5D147D4FDE00D4488F /* main.m */; };
+		9AE98C62147D4FDE00D4488F /* YAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE98C61147D4FDE00D4488F /* YAppDelegate.m */; };
+		9AE98C8F147D579600D4488F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98C8E147D579600D4488F /* Security.framework */; };
+		9AE98DBD147D627800D4488F /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE98DA9147D627700D4488F /* ASIAuthenticationDialog.m */; };
+		9AE98DBE147D627800D4488F /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE98DAA147D627700D4488F /* ASIDataCompressor.m */; };
+		9AE98DBF147D627800D4488F /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE98DAB147D627700D4488F /* ASIDataDecompressor.m */; };
+		9AE98DC0147D627800D4488F /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE98DAC147D627700D4488F /* ASIDownloadCache.m */; };
+		9AE98DC1147D627800D4488F /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE98DAD147D627700D4488F /* ASIFormDataRequest.m */; };
+		9AE98DC2147D627800D4488F /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE98DAE147D627700D4488F /* ASIHTTPRequest.m */; };
+		9AE98DC3147D627800D4488F /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE98DAF147D627700D4488F /* ASIInputStream.m */; };
+		9AE98DC4147D627800D4488F /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE98DB0147D627700D4488F /* ASINetworkQueue.m */; };
+		9AE98DC8147D628600D4488F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE98DC7147D628600D4488F /* Reachability.m */; };
+		9AE98E13147D786600D4488F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98E10147D786600D4488F /* CFNetwork.framework */; };
+		9AE98E14147D786600D4488F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98E11147D786600D4488F /* MobileCoreServices.framework */; };
+		9AE98E15147D786600D4488F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98E12147D786600D4488F /* SystemConfiguration.framework */; };
+		9AE98E17147D787400D4488F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98E16147D787400D4488F /* libz.dylib */; };
+		9AEB949914818BC4007E22DF /* SinaweiboClientCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB949814818BC4007E22DF /* SinaweiboClientCredentials.m */; };
+		9AEB949D1481D85F007E22DF /* SinaweiboOAuthv2TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB949C1481D85F007E22DF /* SinaweiboOAuthv2TimelineViewController.m */; };
+		9AEB94A11481D949007E22DF /* SinaweiboOAuthv2LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB949F1481D949007E22DF /* SinaweiboOAuthv2LoginViewController.m */; };
+		9AEB94A21481D949007E22DF /* SinaweiboOAuthv2LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AEB94A01481D949007E22DF /* SinaweiboOAuthv2LoginViewController.xib */; };
+		9AEB94A51481DF03007E22DF /* SinaweiboOAuthv2LoginSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB94A41481DF02007E22DF /* SinaweiboOAuthv2LoginSelectorViewController.m */; };
+		9AEB94A814822F32007E22DF /* SinaweiboOAuthv1TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB94A714822F32007E22DF /* SinaweiboOAuthv1TimelineViewController.m */; };
+		9AEB94AC14822F54007E22DF /* SinaweiboOAuthv1LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB94AA14822F53007E22DF /* SinaweiboOAuthv1LoginViewController.m */; };
+		9AEB94AD14822F54007E22DF /* SinaweiboOAuthv1LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AEB94AB14822F54007E22DF /* SinaweiboOAuthv1LoginViewController.xib */; };
+		9AEB94C31482994D007E22DF /* QQWeiboClientCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB94C21482994D007E22DF /* QQWeiboClientCredentials.m */; };
+		9AEB94C714829AAA007E22DF /* QQweiboOAuthv1LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB94C514829AA9007E22DF /* QQweiboOAuthv1LoginViewController.m */; };
+		9AEB94C814829AAA007E22DF /* QQweiboOAuthv1LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AEB94C614829AAA007E22DF /* QQweiboOAuthv1LoginViewController.xib */; };
+		9AEB94CB14829EB6007E22DF /* QQweiboOAuthv1TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB94CA14829EB5007E22DF /* QQweiboOAuthv1TimelineViewController.m */; };
+		9AEB94F21482B7E2007E22DF /* FlickrClientCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB94F11482B7E2007E22DF /* FlickrClientCredentials.m */; };
+		9AEB94F51482BA53007E22DF /* FlickrListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB94F41482BA53007E22DF /* FlickrListViewController.m */; };
+		9AEB94F91482BB3F007E22DF /* FlickrLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB94F71482BB3E007E22DF /* FlickrLoginViewController.m */; };
+		9AEB94FA1482BB3F007E22DF /* FlickrLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AEB94F81482BB3E007E22DF /* FlickrLoginViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9AABE95E147F8ADF00A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A09913B147B9D6C005FBF4B;
+			remoteInfo = ybase64;
+		};
+		9AABE960147F8ADF00A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A0991DB147BA274005FBF4B;
+			remoteInfo = ybase64additions;
+		};
+		9AABE962147F8ADF00A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A0991A4147BA059005FBF4B;
+			remoteInfo = ycocoaadditions;
+		};
+		9AABE964147F8ADF00A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A099231147BA3F6005FBF4B;
+			remoteInfo = yoauth;
+		};
+		9AABE966147F8ADF00A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AC0C4E4147E9B1C008E5AD5;
+			remoteInfo = yoauthadditions;
+		};
+		9AABE968147F8ADF00A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A09914B147B9D6C005FBF4B;
+			remoteInfo = ybase64Tests;
+		};
+		9AABE96A147F8ADF00A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A0991B1147BA059005FBF4B;
+			remoteInfo = ycocoaadditionsTests;
+		};
+		9AABE96C147F8ADF00A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A0991E8147BA274005FBF4B;
+			remoteInfo = ybase64additionsTests;
+		};
+		9AABE96E147F8ADF00A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A09923E147BA3F6005FBF4B;
+			remoteInfo = yoauthTests;
+		};
+		9AABE970147F8ADF00A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AC17AEC147BB3FC00499A4F;
+			remoteInfo = ytoolkit;
+		};
+		9AABE972147F8ADF00A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AC0C4F1147E9B1C008E5AD5;
+			remoteInfo = yoauthadditionsTests;
+		};
+		9AABE974147F8B0400A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A09913A147B9D6C005FBF4B;
+			remoteInfo = ybase64;
+		};
+		9AABE976147F8B0400A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A0991DA147BA274005FBF4B;
+			remoteInfo = ybase64additions;
+		};
+		9AABE978147F8B0400A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A0991A3147BA059005FBF4B;
+			remoteInfo = ycocoaadditions;
+		};
+		9AABE97A147F8B0400A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A099230147BA3F6005FBF4B;
+			remoteInfo = yoauth;
+		};
+		9AABE97C147F8B0400A678B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AC0C4E3147E9B1C008E5AD5;
+			remoteInfo = yoauthadditions;
+		};
+		9AC0C5CE147F81FC008E5AD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC0C5C4147F81FC008E5AD5 /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC12323D1391D5CC00131607;
+			remoteInfo = SBJson;
+		};
+		9AC0C5D0147F81FC008E5AD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC0C5C4147F81FC008E5AD5 /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC1232521391D5CC00131607;
+			remoteInfo = SBJsonTests;
+		};
+		9AC0C5D2147F81FC008E5AD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC0C5C4147F81FC008E5AD5 /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCC2626913920FC7003D9994;
+			remoteInfo = "sbjson-ios";
+		};
+		9AC0C5D4147F81FC008E5AD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC0C5C4147F81FC008E5AD5 /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCC2627313920FC7003D9994;
+			remoteInfo = "sbjson-iosTests";
+		};
+		9AC0C5D7147F821A008E5AD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC0C5C4147F81FC008E5AD5 /* SBJson.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCC2626813920FC7003D9994;
+			remoteInfo = "sbjson-ios";
+		};
+		9AC0FCEE1481485F00E020AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AC0FCD21481318000E020AF;
+			remoteInfo = ytoolkitbundle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ytoolkit.xcodeproj; path = ../ytoolkit/ytoolkit.xcodeproj; sourceTree = "<group>"; };
+		9AABEA37147FB37C00A678B3 /* TwitterClientCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterClientCredentials.h; sourceTree = "<group>"; };
+		9AABEA38147FB37C00A678B3 /* TwitterClientCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterClientCredentials.m; sourceTree = "<group>"; };
+		9AABEA3A147FB3FD00A678B3 /* TwitterTimelineListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTimelineListViewController.h; sourceTree = "<group>"; };
+		9AABEA3B147FB3FD00A678B3 /* TwitterTimelineListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTimelineListViewController.m; sourceTree = "<group>"; };
+		9AC0C4D3147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanOAuthv1LoginViewController.h; sourceTree = "<group>"; };
+		9AC0C4D4147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanOAuthv1LoginViewController.m; sourceTree = "<group>"; };
+		9AC0C4D5147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoubanOAuthv1LoginViewController.xib; sourceTree = "<group>"; };
+		9AC0C547147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ASIHTTPRequest+YOAuthv1Request.h"; path = "../../ytoolkit/externals/asi-http-request additions/ASIHTTPRequest+YOAuthv1Request.h"; sourceTree = "<group>"; };
+		9AC0C548147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ASIHTTPRequest+YOAuthv1Request.m"; path = "../../ytoolkit/externals/asi-http-request additions/ASIHTTPRequest+YOAuthv1Request.m"; sourceTree = "<group>"; };
+		9AC0C566147F3EBD008E5AD5 /* DemoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoListViewController.h; sourceTree = "<group>"; };
+		9AC0C567147F3EBD008E5AD5 /* DemoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoListViewController.m; sourceTree = "<group>"; };
+		9AC0C569147F5F82008E5AD5 /* Doubanv1MeesageStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doubanv1MeesageStreamViewController.h; sourceTree = "<group>"; };
+		9AC0C56A147F5F82008E5AD5 /* Doubanv1MeesageStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doubanv1MeesageStreamViewController.m; sourceTree = "<group>"; };
+		9AC0C56C147F69A0008E5AD5 /* DoubanClientCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanClientCredentials.h; sourceTree = "<group>"; };
+		9AC0C56D147F69A1008E5AD5 /* DoubanClientCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanClientCredentials.m; sourceTree = "<group>"; };
+		9AC0C5C4147F81FC008E5AD5 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = "../../../../opensources/apple/general/json-framework/SBJson.xcodeproj"; sourceTree = "<group>"; };
+		9AC0FC98147FE93000E020AF /* TwitterLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterLoginViewController.h; sourceTree = "<group>"; };
+		9AC0FC99147FE93000E020AF /* TwitterLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterLoginViewController.m; sourceTree = "<group>"; };
+		9AC0FC9A147FE93000E020AF /* TwitterLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterLoginViewController.xib; sourceTree = "<group>"; };
+		9AC0FCA41480B30100E020AF /* FacebookClientCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookClientCredentials.h; sourceTree = "<group>"; };
+		9AC0FCA51480B30100E020AF /* FacebookClientCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookClientCredentials.m; sourceTree = "<group>"; };
+		9AC0FCA71480B3E600E020AF /* FacebookNewsFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookNewsFeedViewController.h; sourceTree = "<group>"; };
+		9AC0FCA81480B3E600E020AF /* FacebookNewsFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookNewsFeedViewController.m; sourceTree = "<group>"; };
+		9AC0FCAA1480BD2200E020AF /* FacebookLoginSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookLoginSelectorViewController.h; sourceTree = "<group>"; };
+		9AC0FCAB1480BD2300E020AF /* FacebookLoginSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookLoginSelectorViewController.m; sourceTree = "<group>"; };
+		9AC0FCB21481146100E020AF /* FacebookLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookLoginViewController.h; sourceTree = "<group>"; };
+		9AC0FCB31481146200E020AF /* FacebookLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookLoginViewController.m; sourceTree = "<group>"; };
+		9AC0FCB41481146300E020AF /* FacebookLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookLoginViewController.xib; sourceTree = "<group>"; };
+		9AC0FCEA1481485D00E020AF /* OAuthv1BaseFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthv1BaseFeedViewController.h; sourceTree = "<group>"; };
+		9AC0FCEB1481485E00E020AF /* OAuthv1BaseFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthv1BaseFeedViewController.m; sourceTree = "<group>"; };
+		9AC0FCF01481494100E020AF /* OAuthv1BaseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthv1BaseLoginViewController.h; sourceTree = "<group>"; };
+		9AC0FCF11481494100E020AF /* OAuthv1BaseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthv1BaseLoginViewController.m; sourceTree = "<group>"; };
+		9AC0FCF41481541500E020AF /* LiveClientCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveClientCredentials.h; sourceTree = "<group>"; };
+		9AC0FCF51481541500E020AF /* LiveClientCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveClientCredentials.m; sourceTree = "<group>"; };
+		9AC0FCF814815F5A00E020AF /* OAuthBaseFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthBaseFeedViewController.h; sourceTree = "<group>"; };
+		9AC0FCF914815F5B00E020AF /* OAuthBaseFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthBaseFeedViewController.m; sourceTree = "<group>"; };
+		9AC0FCFB148160B600E020AF /* OAuthv2BaseFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthv2BaseFeedViewController.h; sourceTree = "<group>"; };
+		9AC0FCFC148160B600E020AF /* OAuthv2BaseFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthv2BaseFeedViewController.m; sourceTree = "<group>"; };
+		9AC0FCFE1481615700E020AF /* OAuthv2BaseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthv2BaseLoginViewController.h; sourceTree = "<group>"; };
+		9AC0FCFF1481615700E020AF /* OAuthv2BaseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthv2BaseLoginViewController.m; sourceTree = "<group>"; };
+		9AE98C4D147D4FDE00D4488F /* ytoolkitdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ytoolkitdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE98C51147D4FDE00D4488F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9AE98C53147D4FDE00D4488F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9AE98C55147D4FDE00D4488F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9AE98C59147D4FDE00D4488F /* ytoolkitdemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ytoolkitdemo-Info.plist"; sourceTree = "<group>"; };
+		9AE98C5B147D4FDE00D4488F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9AE98C5D147D4FDE00D4488F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9AE98C5F147D4FDE00D4488F /* ytoolkitdemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ytoolkitdemo-Prefix.pch"; sourceTree = "<group>"; };
+		9AE98C60147D4FDE00D4488F /* YAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YAppDelegate.h; sourceTree = "<group>"; };
+		9AE98C61147D4FDE00D4488F /* YAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAppDelegate.m; sourceTree = "<group>"; };
+		9AE98C8E147D579600D4488F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9AE98DA9147D627700D4488F /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = "externals/asi-http-request/Classes/ASIAuthenticationDialog.m"; sourceTree = SOURCE_ROOT; };
+		9AE98DAA147D627700D4488F /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDataCompressor.m; path = "externals/asi-http-request/Classes/ASIDataCompressor.m"; sourceTree = SOURCE_ROOT; };
+		9AE98DAB147D627700D4488F /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDataDecompressor.m; path = "externals/asi-http-request/Classes/ASIDataDecompressor.m"; sourceTree = SOURCE_ROOT; };
+		9AE98DAC147D627700D4488F /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDownloadCache.m; path = "externals/asi-http-request/Classes/ASIDownloadCache.m"; sourceTree = SOURCE_ROOT; };
+		9AE98DAD147D627700D4488F /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = "externals/asi-http-request/Classes/ASIFormDataRequest.m"; sourceTree = SOURCE_ROOT; };
+		9AE98DAE147D627700D4488F /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = "externals/asi-http-request/Classes/ASIHTTPRequest.m"; sourceTree = SOURCE_ROOT; };
+		9AE98DAF147D627700D4488F /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = "externals/asi-http-request/Classes/ASIInputStream.m"; sourceTree = SOURCE_ROOT; };
+		9AE98DB0147D627700D4488F /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = "externals/asi-http-request/Classes/ASINetworkQueue.m"; sourceTree = SOURCE_ROOT; };
+		9AE98DB1147D627700D4488F /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = "externals/asi-http-request/Classes/ASIAuthenticationDialog.h"; sourceTree = SOURCE_ROOT; };
+		9AE98DB2147D627700D4488F /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = "externals/asi-http-request/Classes/ASICacheDelegate.h"; sourceTree = SOURCE_ROOT; };
+		9AE98DB3147D627800D4488F /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDataCompressor.h; path = "externals/asi-http-request/Classes/ASIDataCompressor.h"; sourceTree = SOURCE_ROOT; };
+		9AE98DB4147D627800D4488F /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDataDecompressor.h; path = "externals/asi-http-request/Classes/ASIDataDecompressor.h"; sourceTree = SOURCE_ROOT; };
+		9AE98DB5147D627800D4488F /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDownloadCache.h; path = "externals/asi-http-request/Classes/ASIDownloadCache.h"; sourceTree = SOURCE_ROOT; };
+		9AE98DB6147D627800D4488F /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = "externals/asi-http-request/Classes/ASIFormDataRequest.h"; sourceTree = SOURCE_ROOT; };
+		9AE98DB7147D627800D4488F /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = "externals/asi-http-request/Classes/ASIHTTPRequest.h"; sourceTree = SOURCE_ROOT; };
+		9AE98DB8147D627800D4488F /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = "externals/asi-http-request/Classes/ASIHTTPRequestConfig.h"; sourceTree = SOURCE_ROOT; };
+		9AE98DB9147D627800D4488F /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestDelegate.h; path = "externals/asi-http-request/Classes/ASIHTTPRequestDelegate.h"; sourceTree = SOURCE_ROOT; };
+		9AE98DBA147D627800D4488F /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIInputStream.h; path = "externals/asi-http-request/Classes/ASIInputStream.h"; sourceTree = SOURCE_ROOT; };
+		9AE98DBB147D627800D4488F /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = "externals/asi-http-request/Classes/ASINetworkQueue.h"; sourceTree = SOURCE_ROOT; };
+		9AE98DBC147D627800D4488F /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = "externals/asi-http-request/Classes/ASIProgressDelegate.h"; sourceTree = SOURCE_ROOT; };
+		9AE98DC6147D628600D4488F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		9AE98DC7147D628600D4488F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		9AE98E10147D786600D4488F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9AE98E11147D786600D4488F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9AE98E12147D786600D4488F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9AE98E16147D787400D4488F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9AEB949714818BC4007E22DF /* SinaweiboClientCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaweiboClientCredentials.h; sourceTree = "<group>"; };
+		9AEB949814818BC4007E22DF /* SinaweiboClientCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaweiboClientCredentials.m; sourceTree = "<group>"; };
+		9AEB949B1481D85F007E22DF /* SinaweiboOAuthv2TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaweiboOAuthv2TimelineViewController.h; sourceTree = "<group>"; };
+		9AEB949C1481D85F007E22DF /* SinaweiboOAuthv2TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaweiboOAuthv2TimelineViewController.m; sourceTree = "<group>"; };
+		9AEB949E1481D949007E22DF /* SinaweiboOAuthv2LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaweiboOAuthv2LoginViewController.h; sourceTree = "<group>"; };
+		9AEB949F1481D949007E22DF /* SinaweiboOAuthv2LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaweiboOAuthv2LoginViewController.m; sourceTree = "<group>"; };
+		9AEB94A01481D949007E22DF /* SinaweiboOAuthv2LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SinaweiboOAuthv2LoginViewController.xib; sourceTree = "<group>"; };
+		9AEB94A31481DF02007E22DF /* SinaweiboOAuthv2LoginSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaweiboOAuthv2LoginSelectorViewController.h; sourceTree = "<group>"; };
+		9AEB94A41481DF02007E22DF /* SinaweiboOAuthv2LoginSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaweiboOAuthv2LoginSelectorViewController.m; sourceTree = "<group>"; };
+		9AEB94A614822F32007E22DF /* SinaweiboOAuthv1TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaweiboOAuthv1TimelineViewController.h; sourceTree = "<group>"; };
+		9AEB94A714822F32007E22DF /* SinaweiboOAuthv1TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaweiboOAuthv1TimelineViewController.m; sourceTree = "<group>"; };
+		9AEB94A914822F53007E22DF /* SinaweiboOAuthv1LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaweiboOAuthv1LoginViewController.h; sourceTree = "<group>"; };
+		9AEB94AA14822F53007E22DF /* SinaweiboOAuthv1LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaweiboOAuthv1LoginViewController.m; sourceTree = "<group>"; };
+		9AEB94AB14822F54007E22DF /* SinaweiboOAuthv1LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SinaweiboOAuthv1LoginViewController.xib; sourceTree = "<group>"; };
+		9AEB94C11482994D007E22DF /* QQWeiboClientCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQWeiboClientCredentials.h; sourceTree = "<group>"; };
+		9AEB94C21482994D007E22DF /* QQWeiboClientCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQWeiboClientCredentials.m; sourceTree = "<group>"; };
+		9AEB94C414829AA9007E22DF /* QQweiboOAuthv1LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQweiboOAuthv1LoginViewController.h; sourceTree = "<group>"; };
+		9AEB94C514829AA9007E22DF /* QQweiboOAuthv1LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQweiboOAuthv1LoginViewController.m; sourceTree = "<group>"; };
+		9AEB94C614829AAA007E22DF /* QQweiboOAuthv1LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QQweiboOAuthv1LoginViewController.xib; sourceTree = "<group>"; };
+		9AEB94C914829EB5007E22DF /* QQweiboOAuthv1TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQweiboOAuthv1TimelineViewController.h; sourceTree = "<group>"; };
+		9AEB94CA14829EB5007E22DF /* QQweiboOAuthv1TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQweiboOAuthv1TimelineViewController.m; sourceTree = "<group>"; };
+		9AEB94F01482B7E2007E22DF /* FlickrClientCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrClientCredentials.h; sourceTree = "<group>"; };
+		9AEB94F11482B7E2007E22DF /* FlickrClientCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrClientCredentials.m; sourceTree = "<group>"; };
+		9AEB94F31482BA53007E22DF /* FlickrListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrListViewController.h; sourceTree = "<group>"; };
+		9AEB94F41482BA53007E22DF /* FlickrListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrListViewController.m; sourceTree = "<group>"; };
+		9AEB94F61482BB3E007E22DF /* FlickrLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrLoginViewController.h; sourceTree = "<group>"; };
+		9AEB94F71482BB3E007E22DF /* FlickrLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrLoginViewController.m; sourceTree = "<group>"; };
+		9AEB94F81482BB3E007E22DF /* FlickrLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlickrLoginViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9AE98C4A147D4FDE00D4488F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AABE9FE147F8ED300A678B3 /* libybase64.a in Frameworks */,
+				9AABE9FF147F8ED300A678B3 /* libybase64additions.a in Frameworks */,
+				9AABEA00147F8ED300A678B3 /* libycocoaadditions.a in Frameworks */,
+				9AABEA01147F8ED300A678B3 /* libyoauth.a in Frameworks */,
+				9AABEA02147F8ED300A678B3 /* libyoauthadditions.a in Frameworks */,
+				9AC0C5D6147F8210008E5AD5 /* libsbjson-ios.a in Frameworks */,
+				9AE98E17147D787400D4488F /* libz.dylib in Frameworks */,
+				9AE98E13147D786600D4488F /* CFNetwork.framework in Frameworks */,
+				9AE98E14147D786600D4488F /* MobileCoreServices.framework in Frameworks */,
+				9AE98E15147D786600D4488F /* SystemConfiguration.framework in Frameworks */,
+				9AE98C8F147D579600D4488F /* Security.framework in Frameworks */,
+				9AE98C52147D4FDE00D4488F /* UIKit.framework in Frameworks */,
+				9AE98C54147D4FDE00D4488F /* Foundation.framework in Frameworks */,
+				9AE98C56147D4FDE00D4488F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9AABE94E147F8ADF00A678B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AABE95F147F8ADF00A678B3 /* libybase64.a */,
+				9AABE961147F8ADF00A678B3 /* libybase64additions.a */,
+				9AABE963147F8ADF00A678B3 /* libycocoaadditions.a */,
+				9AABE965147F8ADF00A678B3 /* libyoauth.a */,
+				9AABE967147F8ADF00A678B3 /* libyoauthadditions.a */,
+				9AABE969147F8ADF00A678B3 /* ybase64Tests.octest */,
+				9AABE96B147F8ADF00A678B3 /* ycocoaadditionsTests.octest */,
+				9AABE96D147F8ADF00A678B3 /* ybase64additionsTests.octest */,
+				9AABE96F147F8ADF00A678B3 /* yoauthTests.octest */,
+				9AABE971147F8ADF00A678B3 /* ytoolkit.framework */,
+				9AABE973147F8ADF00A678B3 /* yoauthadditionsTests.octest */,
+				9AC0FCEF1481485F00E020AF /* ytoolkitbundle.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AABEA36147FB36500A678B3 /* twitter */ = {
+			isa = PBXGroup;
+			children = (
+				9AABEA37147FB37C00A678B3 /* TwitterClientCredentials.h */,
+				9AABEA38147FB37C00A678B3 /* TwitterClientCredentials.m */,
+				9AABEA3A147FB3FD00A678B3 /* TwitterTimelineListViewController.h */,
+				9AABEA3B147FB3FD00A678B3 /* TwitterTimelineListViewController.m */,
+				9AC0FC98147FE93000E020AF /* TwitterLoginViewController.h */,
+				9AC0FC99147FE93000E020AF /* TwitterLoginViewController.m */,
+				9AC0FC9A147FE93000E020AF /* TwitterLoginViewController.xib */,
+			);
+			path = twitter;
+			sourceTree = "<group>";
+		};
+		9AC0C4D0147E997A008E5AD5 /* oauthv1 */ = {
+			isa = PBXGroup;
+			children = (
+				9AC0FCEA1481485D00E020AF /* OAuthv1BaseFeedViewController.h */,
+				9AC0FCEB1481485E00E020AF /* OAuthv1BaseFeedViewController.m */,
+				9AC0FCF01481494100E020AF /* OAuthv1BaseLoginViewController.h */,
+				9AC0FCF11481494100E020AF /* OAuthv1BaseLoginViewController.m */,
+				9AEB94EF1482B5D5007E22DF /* flickr */,
+				9AEB94C014829924007E22DF /* qq */,
+				9AEB949614818BB1007E22DF /* sinaweibo */,
+				9AABEA36147FB36500A678B3 /* twitter */,
+				9AC0C4D2147E9992008E5AD5 /* douban */,
+			);
+			path = oauthv1;
+			sourceTree = "<group>";
+		};
+		9AC0C4D1147E997A008E5AD5 /* oauthv2 */ = {
+			isa = PBXGroup;
+			children = (
+				9AC0FCFB148160B600E020AF /* OAuthv2BaseFeedViewController.h */,
+				9AC0FCFC148160B600E020AF /* OAuthv2BaseFeedViewController.m */,
+				9AC0FCFE1481615700E020AF /* OAuthv2BaseLoginViewController.h */,
+				9AC0FCFF1481615700E020AF /* OAuthv2BaseLoginViewController.m */,
+				9AEB949A1481D65B007E22DF /* sinaweibo */,
+				9AC0FCF7148155B500E020AF /* google */,
+				9AC0FCF31481540000E020AF /* live */,
+				9AC0FCA314800A4400E020AF /* facebook */,
+			);
+			path = oauthv2;
+			sourceTree = "<group>";
+		};
+		9AC0C4D2147E9992008E5AD5 /* douban */ = {
+			isa = PBXGroup;
+			children = (
+				9AC0C4D3147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.h */,
+				9AC0C4D4147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m */,
+				9AC0C4D5147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.xib */,
+				9AC0C569147F5F82008E5AD5 /* Doubanv1MeesageStreamViewController.h */,
+				9AC0C56A147F5F82008E5AD5 /* Doubanv1MeesageStreamViewController.m */,
+				9AC0C56C147F69A0008E5AD5 /* DoubanClientCredentials.h */,
+				9AC0C56D147F69A1008E5AD5 /* DoubanClientCredentials.m */,
+			);
+			path = douban;
+			sourceTree = "<group>";
+		};
+		9AC0C5C5147F81FC008E5AD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AC0C5CF147F81FC008E5AD5 /* SBJson.framework */,
+				9AC0C5D1147F81FC008E5AD5 /* SBJsonTests.octest */,
+				9AC0C5D3147F81FC008E5AD5 /* libsbjson-ios.a */,
+				9AC0C5D5147F81FC008E5AD5 /* sbjson-iosTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AC0FCA314800A4400E020AF /* facebook */ = {
+			isa = PBXGroup;
+			children = (
+				9AC0FCA41480B30100E020AF /* FacebookClientCredentials.h */,
+				9AC0FCA51480B30100E020AF /* FacebookClientCredentials.m */,
+				9AC0FCA71480B3E600E020AF /* FacebookNewsFeedViewController.h */,
+				9AC0FCA81480B3E600E020AF /* FacebookNewsFeedViewController.m */,
+				9AC0FCAA1480BD2200E020AF /* FacebookLoginSelectorViewController.h */,
+				9AC0FCAB1480BD2300E020AF /* FacebookLoginSelectorViewController.m */,
+				9AC0FCB21481146100E020AF /* FacebookLoginViewController.h */,
+				9AC0FCB31481146200E020AF /* FacebookLoginViewController.m */,
+				9AC0FCB41481146300E020AF /* FacebookLoginViewController.xib */,
+			);
+			path = facebook;
+			sourceTree = "<group>";
+		};
+		9AC0FCF31481540000E020AF /* live */ = {
+			isa = PBXGroup;
+			children = (
+				9AC0FCF41481541500E020AF /* LiveClientCredentials.h */,
+				9AC0FCF51481541500E020AF /* LiveClientCredentials.m */,
+			);
+			path = live;
+			sourceTree = "<group>";
+		};
+		9AC0FCF7148155B500E020AF /* google */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = google;
+			sourceTree = "<group>";
+		};
+		9AE98C42147D4FDE00D4488F = {
+			isa = PBXGroup;
+			children = (
+				9AE98C57147D4FDE00D4488F /* ytoolkitdemo */,
+				9AE98CA0147D616200D4488F /* Dependencies */,
+				9AE98C50147D4FDE00D4488F /* Frameworks */,
+				9AE98C4E147D4FDE00D4488F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9AE98C4E147D4FDE00D4488F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AE98C4D147D4FDE00D4488F /* ytoolkitdemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AE98C50147D4FDE00D4488F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AE98E16147D787400D4488F /* libz.dylib */,
+				9AE98E10147D786600D4488F /* CFNetwork.framework */,
+				9AE98E11147D786600D4488F /* MobileCoreServices.framework */,
+				9AE98E12147D786600D4488F /* SystemConfiguration.framework */,
+				9AE98C8E147D579600D4488F /* Security.framework */,
+				9AE98C51147D4FDE00D4488F /* UIKit.framework */,
+				9AE98C53147D4FDE00D4488F /* Foundation.framework */,
+				9AE98C55147D4FDE00D4488F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AE98C57147D4FDE00D4488F /* ytoolkitdemo */ = {
+			isa = PBXGroup;
+			children = (
+				9AC0C547147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.h */,
+				9AC0C548147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.m */,
+				9AC0C566147F3EBD008E5AD5 /* DemoListViewController.h */,
+				9AC0C567147F3EBD008E5AD5 /* DemoListViewController.m */,
+				9AC0FCF814815F5A00E020AF /* OAuthBaseFeedViewController.h */,
+				9AC0FCF914815F5B00E020AF /* OAuthBaseFeedViewController.m */,
+				9AC0C4D0147E997A008E5AD5 /* oauthv1 */,
+				9AC0C4D1147E997A008E5AD5 /* oauthv2 */,
+				9AE98C60147D4FDE00D4488F /* YAppDelegate.h */,
+				9AE98C61147D4FDE00D4488F /* YAppDelegate.m */,
+				9AE98DCA147D629D00D4488F /* asi-http-request */,
+				9AE98C58147D4FDE00D4488F /* Supporting Files */,
+			);
+			path = ytoolkitdemo;
+			sourceTree = "<group>";
+		};
+		9AE98C58147D4FDE00D4488F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AE98C59147D4FDE00D4488F /* ytoolkitdemo-Info.plist */,
+				9AE98C5A147D4FDE00D4488F /* InfoPlist.strings */,
+				9AE98C5D147D4FDE00D4488F /* main.m */,
+				9AE98C5F147D4FDE00D4488F /* ytoolkitdemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AE98CA0147D616200D4488F /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */,
+				9AC0C5C4147F81FC008E5AD5 /* SBJson.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		9AE98DC5147D628600D4488F /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				9AE98DC6147D628600D4488F /* Reachability.h */,
+				9AE98DC7147D628600D4488F /* Reachability.m */,
+			);
+			name = Reachability;
+			path = "externals/asi-http-request/External/Reachability";
+			sourceTree = SOURCE_ROOT;
+		};
+		9AE98DCA147D629D00D4488F /* asi-http-request */ = {
+			isa = PBXGroup;
+			children = (
+				9AE98DC5147D628600D4488F /* Reachability */,
+				9AE98DA9147D627700D4488F /* ASIAuthenticationDialog.m */,
+				9AE98DAA147D627700D4488F /* ASIDataCompressor.m */,
+				9AE98DAB147D627700D4488F /* ASIDataDecompressor.m */,
+				9AE98DAC147D627700D4488F /* ASIDownloadCache.m */,
+				9AE98DAD147D627700D4488F /* ASIFormDataRequest.m */,
+				9AE98DAE147D627700D4488F /* ASIHTTPRequest.m */,
+				9AE98DAF147D627700D4488F /* ASIInputStream.m */,
+				9AE98DB0147D627700D4488F /* ASINetworkQueue.m */,
+				9AE98DB1147D627700D4488F /* ASIAuthenticationDialog.h */,
+				9AE98DB2147D627700D4488F /* ASICacheDelegate.h */,
+				9AE98DB3147D627800D4488F /* ASIDataCompressor.h */,
+				9AE98DB4147D627800D4488F /* ASIDataDecompressor.h */,
+				9AE98DB5147D627800D4488F /* ASIDownloadCache.h */,
+				9AE98DB6147D627800D4488F /* ASIFormDataRequest.h */,
+				9AE98DB7147D627800D4488F /* ASIHTTPRequest.h */,
+				9AE98DB8147D627800D4488F /* ASIHTTPRequestConfig.h */,
+				9AE98DB9147D627800D4488F /* ASIHTTPRequestDelegate.h */,
+				9AE98DBA147D627800D4488F /* ASIInputStream.h */,
+				9AE98DBB147D627800D4488F /* ASINetworkQueue.h */,
+				9AE98DBC147D627800D4488F /* ASIProgressDelegate.h */,
+			);
+			name = "asi-http-request";
+			sourceTree = "<group>";
+		};
+		9AEB949614818BB1007E22DF /* sinaweibo */ = {
+			isa = PBXGroup;
+			children = (
+				9AEB949714818BC4007E22DF /* SinaweiboClientCredentials.h */,
+				9AEB949814818BC4007E22DF /* SinaweiboClientCredentials.m */,
+				9AEB94A914822F53007E22DF /* SinaweiboOAuthv1LoginViewController.h */,
+				9AEB94AA14822F53007E22DF /* SinaweiboOAuthv1LoginViewController.m */,
+				9AEB94AB14822F54007E22DF /* SinaweiboOAuthv1LoginViewController.xib */,
+				9AEB94A614822F32007E22DF /* SinaweiboOAuthv1TimelineViewController.h */,
+				9AEB94A714822F32007E22DF /* SinaweiboOAuthv1TimelineViewController.m */,
+			);
+			path = sinaweibo;
+			sourceTree = "<group>";
+		};
+		9AEB949A1481D65B007E22DF /* sinaweibo */ = {
+			isa = PBXGroup;
+			children = (
+				9AEB949B1481D85F007E22DF /* SinaweiboOAuthv2TimelineViewController.h */,
+				9AEB949C1481D85F007E22DF /* SinaweiboOAuthv2TimelineViewController.m */,
+				9AEB949E1481D949007E22DF /* SinaweiboOAuthv2LoginViewController.h */,
+				9AEB949F1481D949007E22DF /* SinaweiboOAuthv2LoginViewController.m */,
+				9AEB94A01481D949007E22DF /* SinaweiboOAuthv2LoginViewController.xib */,
+				9AEB94A31481DF02007E22DF /* SinaweiboOAuthv2LoginSelectorViewController.h */,
+				9AEB94A41481DF02007E22DF /* SinaweiboOAuthv2LoginSelectorViewController.m */,
+			);
+			path = sinaweibo;
+			sourceTree = "<group>";
+		};
+		9AEB94C014829924007E22DF /* qq */ = {
+			isa = PBXGroup;
+			children = (
+				9AEB94C11482994D007E22DF /* QQWeiboClientCredentials.h */,
+				9AEB94C21482994D007E22DF /* QQWeiboClientCredentials.m */,
+				9AEB94C414829AA9007E22DF /* QQweiboOAuthv1LoginViewController.h */,
+				9AEB94C514829AA9007E22DF /* QQweiboOAuthv1LoginViewController.m */,
+				9AEB94C614829AAA007E22DF /* QQweiboOAuthv1LoginViewController.xib */,
+				9AEB94C914829EB5007E22DF /* QQweiboOAuthv1TimelineViewController.h */,
+				9AEB94CA14829EB5007E22DF /* QQweiboOAuthv1TimelineViewController.m */,
+			);
+			path = qq;
+			sourceTree = "<group>";
+		};
+		9AEB94EF1482B5D5007E22DF /* flickr */ = {
+			isa = PBXGroup;
+			children = (
+				9AEB94F01482B7E2007E22DF /* FlickrClientCredentials.h */,
+				9AEB94F11482B7E2007E22DF /* FlickrClientCredentials.m */,
+				9AEB94F31482BA53007E22DF /* FlickrListViewController.h */,
+				9AEB94F41482BA53007E22DF /* FlickrListViewController.m */,
+				9AEB94F61482BB3E007E22DF /* FlickrLoginViewController.h */,
+				9AEB94F71482BB3E007E22DF /* FlickrLoginViewController.m */,
+				9AEB94F81482BB3E007E22DF /* FlickrLoginViewController.xib */,
+			);
+			path = flickr;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9AE98C4C147D4FDE00D4488F /* ytoolkitdemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AE98C65147D4FDE00D4488F /* Build configuration list for PBXNativeTarget "ytoolkitdemo" */;
+			buildPhases = (
+				9AE98C49147D4FDE00D4488F /* Sources */,
+				9AE98C4A147D4FDE00D4488F /* Frameworks */,
+				9AE98C4B147D4FDE00D4488F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AABE975147F8B0400A678B3 /* PBXTargetDependency */,
+				9AABE977147F8B0400A678B3 /* PBXTargetDependency */,
+				9AABE979147F8B0400A678B3 /* PBXTargetDependency */,
+				9AABE97B147F8B0400A678B3 /* PBXTargetDependency */,
+				9AABE97D147F8B0400A678B3 /* PBXTargetDependency */,
+				9AC0C5D8147F821A008E5AD5 /* PBXTargetDependency */,
+			);
+			name = ytoolkitdemo;
+			productName = ytoolkitdemo;
+			productReference = 9AE98C4D147D4FDE00D4488F /* ytoolkitdemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9AE98C44147D4FDE00D4488F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Douban Inc";
+			};
+			buildConfigurationList = 9AE98C47147D4FDE00D4488F /* Build configuration list for PBXProject "ytoolkitdemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = 9AE98C42147D4FDE00D4488F;
+			productRefGroup = 9AE98C4E147D4FDE00D4488F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9AC0C5C5147F81FC008E5AD5 /* Products */;
+					ProjectRef = 9AC0C5C4147F81FC008E5AD5 /* SBJson.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AABE94E147F8ADF00A678B3 /* Products */;
+					ProjectRef = 9AABE94D147F8ADF00A678B3 /* ytoolkit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				9AE98C4C147D4FDE00D4488F /* ytoolkitdemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9AABE95F147F8ADF00A678B3 /* libybase64.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libybase64.a;
+			remoteRef = 9AABE95E147F8ADF00A678B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AABE961147F8ADF00A678B3 /* libybase64additions.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libybase64additions.a;
+			remoteRef = 9AABE960147F8ADF00A678B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AABE963147F8ADF00A678B3 /* libycocoaadditions.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libycocoaadditions.a;
+			remoteRef = 9AABE962147F8ADF00A678B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AABE965147F8ADF00A678B3 /* libyoauth.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoauth.a;
+			remoteRef = 9AABE964147F8ADF00A678B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AABE967147F8ADF00A678B3 /* libyoauthadditions.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoauthadditions.a;
+			remoteRef = 9AABE966147F8ADF00A678B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AABE969147F8ADF00A678B3 /* ybase64Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ybase64Tests.octest;
+			remoteRef = 9AABE968147F8ADF00A678B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AABE96B147F8ADF00A678B3 /* ycocoaadditionsTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ycocoaadditionsTests.octest;
+			remoteRef = 9AABE96A147F8ADF00A678B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AABE96D147F8ADF00A678B3 /* ybase64additionsTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ybase64additionsTests.octest;
+			remoteRef = 9AABE96C147F8ADF00A678B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AABE96F147F8ADF00A678B3 /* yoauthTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = yoauthTests.octest;
+			remoteRef = 9AABE96E147F8ADF00A678B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AABE971147F8ADF00A678B3 /* ytoolkit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ytoolkit.framework;
+			remoteRef = 9AABE970147F8ADF00A678B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AABE973147F8ADF00A678B3 /* yoauthadditionsTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = yoauthadditionsTests.octest;
+			remoteRef = 9AABE972147F8ADF00A678B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AC0C5CF147F81FC008E5AD5 /* SBJson.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SBJson.framework;
+			remoteRef = 9AC0C5CE147F81FC008E5AD5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AC0C5D1147F81FC008E5AD5 /* SBJsonTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SBJsonTests.octest;
+			remoteRef = 9AC0C5D0147F81FC008E5AD5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AC0C5D3147F81FC008E5AD5 /* libsbjson-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libsbjson-ios.a";
+			remoteRef = 9AC0C5D2147F81FC008E5AD5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AC0C5D5147F81FC008E5AD5 /* sbjson-iosTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "sbjson-iosTests.octest";
+			remoteRef = 9AC0C5D4147F81FC008E5AD5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AC0FCEF1481485F00E020AF /* ytoolkitbundle.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ytoolkitbundle.bundle;
+			remoteRef = 9AC0FCEE1481485F00E020AF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9AE98C4B147D4FDE00D4488F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE98C5C147D4FDE00D4488F /* InfoPlist.strings in Resources */,
+				9AC0C4D7147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.xib in Resources */,
+				9AC0FC9C147FE93000E020AF /* TwitterLoginViewController.xib in Resources */,
+				9AC0FCB61481146300E020AF /* FacebookLoginViewController.xib in Resources */,
+				9AEB94A21481D949007E22DF /* SinaweiboOAuthv2LoginViewController.xib in Resources */,
+				9AEB94AD14822F54007E22DF /* SinaweiboOAuthv1LoginViewController.xib in Resources */,
+				9AEB94C814829AAA007E22DF /* QQweiboOAuthv1LoginViewController.xib in Resources */,
+				9AEB94FA1482BB3F007E22DF /* FlickrLoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9AE98C49147D4FDE00D4488F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE98C5E147D4FDE00D4488F /* main.m in Sources */,
+				9AE98C62147D4FDE00D4488F /* YAppDelegate.m in Sources */,
+				9AE98DBD147D627800D4488F /* ASIAuthenticationDialog.m in Sources */,
+				9AE98DBE147D627800D4488F /* ASIDataCompressor.m in Sources */,
+				9AE98DBF147D627800D4488F /* ASIDataDecompressor.m in Sources */,
+				9AE98DC0147D627800D4488F /* ASIDownloadCache.m in Sources */,
+				9AE98DC1147D627800D4488F /* ASIFormDataRequest.m in Sources */,
+				9AE98DC2147D627800D4488F /* ASIHTTPRequest.m in Sources */,
+				9AE98DC3147D627800D4488F /* ASIInputStream.m in Sources */,
+				9AE98DC4147D627800D4488F /* ASINetworkQueue.m in Sources */,
+				9AE98DC8147D628600D4488F /* Reachability.m in Sources */,
+				9AC0C4D6147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m in Sources */,
+				9AC0C549147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.m in Sources */,
+				9AC0C568147F3EBD008E5AD5 /* DemoListViewController.m in Sources */,
+				9AC0C56B147F5F83008E5AD5 /* Doubanv1MeesageStreamViewController.m in Sources */,
+				9AC0C56E147F69A1008E5AD5 /* DoubanClientCredentials.m in Sources */,
+				9AABEA39147FB37C00A678B3 /* TwitterClientCredentials.m in Sources */,
+				9AABEA3C147FB3FD00A678B3 /* TwitterTimelineListViewController.m in Sources */,
+				9AC0FC9B147FE93000E020AF /* TwitterLoginViewController.m in Sources */,
+				9AC0FCA61480B30100E020AF /* FacebookClientCredentials.m in Sources */,
+				9AC0FCA91480B3E600E020AF /* FacebookNewsFeedViewController.m in Sources */,
+				9AC0FCAC1480BD2300E020AF /* FacebookLoginSelectorViewController.m in Sources */,
+				9AC0FCB51481146300E020AF /* FacebookLoginViewController.m in Sources */,
+				9AC0FCEC1481485E00E020AF /* OAuthv1BaseFeedViewController.m in Sources */,
+				9AC0FCF21481494200E020AF /* OAuthv1BaseLoginViewController.m in Sources */,
+				9AC0FCF61481541500E020AF /* LiveClientCredentials.m in Sources */,
+				9AC0FCFA14815F5C00E020AF /* OAuthBaseFeedViewController.m in Sources */,
+				9AC0FCFD148160B700E020AF /* OAuthv2BaseFeedViewController.m in Sources */,
+				9AC0FD001481615800E020AF /* OAuthv2BaseLoginViewController.m in Sources */,
+				9AEB949914818BC4007E22DF /* SinaweiboClientCredentials.m in Sources */,
+				9AEB949D1481D85F007E22DF /* SinaweiboOAuthv2TimelineViewController.m in Sources */,
+				9AEB94A11481D949007E22DF /* SinaweiboOAuthv2LoginViewController.m in Sources */,
+				9AEB94A51481DF03007E22DF /* SinaweiboOAuthv2LoginSelectorViewController.m in Sources */,
+				9AEB94A814822F32007E22DF /* SinaweiboOAuthv1TimelineViewController.m in Sources */,
+				9AEB94AC14822F54007E22DF /* SinaweiboOAuthv1LoginViewController.m in Sources */,
+				9AEB94C31482994D007E22DF /* QQWeiboClientCredentials.m in Sources */,
+				9AEB94C714829AAA007E22DF /* QQweiboOAuthv1LoginViewController.m in Sources */,
+				9AEB94CB14829EB6007E22DF /* QQweiboOAuthv1TimelineViewController.m in Sources */,
+				9AEB94F21482B7E2007E22DF /* FlickrClientCredentials.m in Sources */,
+				9AEB94F51482BA53007E22DF /* FlickrListViewController.m in Sources */,
+				9AEB94F91482BB3F007E22DF /* FlickrLoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9AABE975147F8B0400A678B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ybase64;
+			targetProxy = 9AABE974147F8B0400A678B3 /* PBXContainerItemProxy */;
+		};
+		9AABE977147F8B0400A678B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ybase64additions;
+			targetProxy = 9AABE976147F8B0400A678B3 /* PBXContainerItemProxy */;
+		};
+		9AABE979147F8B0400A678B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ycocoaadditions;
+			targetProxy = 9AABE978147F8B0400A678B3 /* PBXContainerItemProxy */;
+		};
+		9AABE97B147F8B0400A678B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = yoauth;
+			targetProxy = 9AABE97A147F8B0400A678B3 /* PBXContainerItemProxy */;
+		};
+		9AABE97D147F8B0400A678B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = yoauthadditions;
+			targetProxy = 9AABE97C147F8B0400A678B3 /* PBXContainerItemProxy */;
+		};
+		9AC0C5D8147F821A008E5AD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "sbjson-ios";
+			targetProxy = 9AC0C5D7147F821A008E5AD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9AE98C5A147D4FDE00D4488F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AE98C5B147D4FDE00D4488F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9AE98C63147D4FDE00D4488F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9AE98C64147D4FDE00D4488F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9AE98C66147D4FDE00D4488F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ytoolkitdemo/ytoolkitdemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				INFOPLIST_FILE = "ytoolkitdemo/ytoolkitdemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9AE98C67147D4FDE00D4488F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ytoolkitdemo/ytoolkitdemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				INFOPLIST_FILE = "ytoolkitdemo/ytoolkitdemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9AE98C47147D4FDE00D4488F /* Build configuration list for PBXProject "ytoolkitdemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AE98C63147D4FDE00D4488F /* Debug */,
+				9AE98C64147D4FDE00D4488F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AE98C65147D4FDE00D4488F /* Build configuration list for PBXNativeTarget "ytoolkitdemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AE98C66147D4FDE00D4488F /* Debug */,
+				9AE98C67147D4FDE00D4488F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9AE98C44147D4FDE00D4488F /* Project object */;
+}
