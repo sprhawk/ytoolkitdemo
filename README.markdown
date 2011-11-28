@@ -16,7 +16,10 @@ How to build it ?
     $ git submodule init
     $ git submodule update
 ```
-   submodule includes: ytoolkit, SBJson, and ASIHTTPRequest
+   submodule includes: [ytoolkit], [SBJson], and [ASIHTTPRequest]
+
+[ASIHTTPRequest]: https://github.com/pokeb/asi-http-request.git
+[SBJson]: http://stig.github.com/json-framework/
 
 License
 -------
