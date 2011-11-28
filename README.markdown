@@ -38,6 +38,8 @@ How to build it ?
 ```
 
    submodule includes: [ytoolkit], [SBJson], and [ASIHTTPRequest]
+3. Open the project and build it.
+
 
 [ASIHTTPRequest]: https://github.com/pokeb/asi-http-request.git
 [SBJson]: http://stig.github.com/json-framework/
@@ -45,7 +47,7 @@ How to build it ?
 License
 -------
 
-ytoolkitdemo is distributed under FreeBSD license. However, the ytoolkit is under LGPL v3 (except ASIHTTPRequest additions are under FreeBSD)
+ytoolkitdemo is distributed under FreeBSD license. However, the ytoolkit is under LGPL v3 (except ASIHTTPRequest additions are under FreeBSD license)
 
 
 
