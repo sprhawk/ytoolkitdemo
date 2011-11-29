@@ -11,7 +11,6 @@
 		9AABEA3C147FB3FD00A678B3 /* TwitterTimelineListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABEA3B147FB3FD00A678B3 /* TwitterTimelineListViewController.m */; };
 		9AC0C4D6147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C4D4147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m */; };
 		9AC0C4D7147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC0C4D5147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.xib */; };
-		9AC0C549147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C548147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.m */; };
 		9AC0C568147F3EBD008E5AD5 /* DemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C567147F3EBD008E5AD5 /* DemoListViewController.m */; };
 		9AC0C56B147F5F83008E5AD5 /* Doubanv1MeesageStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C56A147F5F82008E5AD5 /* Doubanv1MeesageStreamViewController.m */; };
 		9AC0C56E147F69A1008E5AD5 /* DoubanClientCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C56D147F69A1008E5AD5 /* DoubanClientCredentials.m */; };
@@ -28,6 +27,7 @@
 		9AC0FCFA14815F5C00E020AF /* OAuthBaseFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCF914815F5B00E020AF /* OAuthBaseFeedViewController.m */; };
 		9AC0FCFD148160B700E020AF /* OAuthv2BaseFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCFC148160B600E020AF /* OAuthv2BaseFeedViewController.m */; };
 		9AC0FD001481615800E020AF /* OAuthv2BaseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0FCFF1481615700E020AF /* OAuthv2BaseLoginViewController.m */; };
+		9ADD1F9914848F330020F044 /* ASIHTTPRequest+YOAuthv1Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADD1F9714848F330020F044 /* ASIHTTPRequest+YOAuthv1Request.m */; };
 		9AE98C52147D4FDE00D4488F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98C51147D4FDE00D4488F /* UIKit.framework */; };
 		9AE98C54147D4FDE00D4488F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98C53147D4FDE00D4488F /* Foundation.framework */; };
 		9AE98C56147D4FDE00D4488F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98C55147D4FDE00D4488F /* CoreGraphics.framework */; };
@@ -195,8 +195,6 @@
 		9AC0C4D3147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanOAuthv1LoginViewController.h; sourceTree = "<group>"; };
 		9AC0C4D4147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanOAuthv1LoginViewController.m; sourceTree = "<group>"; };
 		9AC0C4D5147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoubanOAuthv1LoginViewController.xib; sourceTree = "<group>"; };
-		9AC0C547147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ASIHTTPRequest+YOAuthv1Request.h"; path = "../../ytoolkit/externals/asi-http-request additions/ASIHTTPRequest+YOAuthv1Request.h"; sourceTree = "<group>"; };
-		9AC0C548147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ASIHTTPRequest+YOAuthv1Request.m"; path = "../../ytoolkit/externals/asi-http-request additions/ASIHTTPRequest+YOAuthv1Request.m"; sourceTree = "<group>"; };
 		9AC0C566147F3EBD008E5AD5 /* DemoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoListViewController.h; sourceTree = "<group>"; };
 		9AC0C567147F3EBD008E5AD5 /* DemoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoListViewController.m; sourceTree = "<group>"; };
 		9AC0C569147F5F82008E5AD5 /* Doubanv1MeesageStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doubanv1MeesageStreamViewController.h; sourceTree = "<group>"; };
@@ -227,6 +225,8 @@
 		9AC0FCFC148160B600E020AF /* OAuthv2BaseFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthv2BaseFeedViewController.m; sourceTree = "<group>"; };
 		9AC0FCFE1481615700E020AF /* OAuthv2BaseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthv2BaseLoginViewController.h; sourceTree = "<group>"; };
 		9AC0FCFF1481615700E020AF /* OAuthv2BaseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthv2BaseLoginViewController.m; sourceTree = "<group>"; };
+		9ADD1F9714848F330020F044 /* ASIHTTPRequest+YOAuthv1Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ASIHTTPRequest+YOAuthv1Request.m"; path = "ytoolkit/externals/asi-http-request additions/ASIHTTPRequest+YOAuthv1Request.m"; sourceTree = SOURCE_ROOT; };
+		9ADD1F9814848F330020F044 /* ASIHTTPRequest+YOAuthv1Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ASIHTTPRequest+YOAuthv1Request.h"; path = "ytoolkit/externals/asi-http-request additions/ASIHTTPRequest+YOAuthv1Request.h"; sourceTree = SOURCE_ROOT; };
 		9AE98C4D147D4FDE00D4488F /* ytoolkitdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ytoolkitdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE98C51147D4FDE00D4488F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9AE98C53147D4FDE00D4488F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -448,8 +448,8 @@
 		9AE98C57147D4FDE00D4488F /* ytoolkitdemo */ = {
 			isa = PBXGroup;
 			children = (
-				9AC0C547147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.h */,
-				9AC0C548147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.m */,
+				9ADD1F9714848F330020F044 /* ASIHTTPRequest+YOAuthv1Request.m */,
+				9ADD1F9814848F330020F044 /* ASIHTTPRequest+YOAuthv1Request.h */,
 				9AC0C566147F3EBD008E5AD5 /* DemoListViewController.h */,
 				9AC0C567147F3EBD008E5AD5 /* DemoListViewController.m */,
 				9AC0FCF814815F5A00E020AF /* OAuthBaseFeedViewController.h */,
@@ -806,7 +806,6 @@
 				9AE98C5E147D4FDE00D4488F /* main.m in Sources */,
 				9AE98C62147D4FDE00D4488F /* YAppDelegate.m in Sources */,
 				9AC0C4D6147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m in Sources */,
-				9AC0C549147EAE5C008E5AD5 /* ASIHTTPRequest+YOAuthv1Request.m in Sources */,
 				9AC0C568147F3EBD008E5AD5 /* DemoListViewController.m in Sources */,
 				9AC0C56B147F5F83008E5AD5 /* Doubanv1MeesageStreamViewController.m in Sources */,
 				9AC0C56E147F69A1008E5AD5 /* DoubanClientCredentials.m in Sources */,
@@ -844,6 +843,7 @@
 				9AEB957B1483A962007E22DF /* ASIInputStream.m in Sources */,
 				9AEB957C1483A962007E22DF /* ASINetworkQueue.m in Sources */,
 				9AEB95801483A976007E22DF /* Reachability.m in Sources */,
+				9ADD1F9914848F330020F044 /* ASIHTTPRequest+YOAuthv1Request.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
