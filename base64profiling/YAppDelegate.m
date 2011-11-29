@@ -82,7 +82,7 @@ void compareToLibb64Imp(void);
 
 
 void compareToLibb64Imp() {
-    NSString * path = [[NSBundle mainBundle] pathForResource:@"install_flash_player_osx_intel" ofType:@"dmg"];
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"example" ofType:@"png"];
     NSData * data = [NSData dataWithContentsOfFile:path];
     
     const void * pdata = data.bytes;
