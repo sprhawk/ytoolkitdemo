@@ -38,7 +38,11 @@ How to build it ?
 ```
 
    submodule includes: [ytoolkit], [SBJson], and [ASIHTTPRequest]
-3. Open the project and build it.
+3. Open the project, if you are using a iOS is 5.0 earlier, you MUST change SBJson-ios lib's ARC setting to '**NO**'
+
+4. Register and apply your own API key/secret, in the corresponding ClientCredentials.m
+
+5. Build and run the project.
 
 
 [ASIHTTPRequest]: https://github.com/pokeb/asi-http-request.git
