@@ -1,0 +1,122 @@
+.TH BASE64 1 "20 FEB 2001"
+.UC 4
+.SH NAME
+base64 \- encode / decode binary file as RFC 1341 MIME base64
+.SH SYNOPSIS
+.B base64
+.BR \-d | \-e 
+[
+.B \-n
+]
+[
+.B \-u
+]
+[
+.I infile
+[
+.I outfile
+] ]
+.SH DESCRIPTION
+The MIME (Multipurpose Internet Mail Extensions) specification
+(RFC 1341 and successors) defines a mechanism for encoding arbitrary binary
+information for transmission by electronic mail.  Triplets
+of 8-bit octets are encoded as groups of four characters,
+each representing 6 bits of the source 24 bits.  Only characters
+present in all variants of ASCII and EBCDIC are used, avoiding
+incompatibilities in other forms of encoding such as
+.BR uuencode / uudecode .
+.PP
+.B base64
+is a command line utility which encodes and decodes files in this format.
+It can be used within a pipeline as an encoding or decoding filter,
+and is most commonly used in this manner as part of an automated
+mail processing system.
+.SH OPTIONS
+.TP 12
+.B \-\-copyright
+Print program copyright information.
+.TP
+.BR \-d ", " \-\-decode
+Decodes the input, previously created by
+.BR base64 ,
+to recover the original input file.
+.TP
+.BR \-e ", " \-\-encode
+Encodes the input into an output text file containing
+its base64 encoding.
+.TP
+.BR \-n ", " \-\-noerrcheck
+Suppress error checking when decoding.  By default, upon encountering
+a non white space character which does not belong to the base64
+set, or discovering the input file is incorrectly padded to a
+multiple of four characters,
+.B base64
+issues an error message and terminates
+processing with exit status 1.  The
+.B \-n
+option suppresses even this rudimentary error checking; invalid
+characters are silently ignored and the output truncated to the
+last three valid octets if the input is incorrectly padded.
+.TP
+.BR \-u ", " \-\-help
+Print how-to-call information.
+.TP
+.B \-\-version
+Print program version information.
+.SH EXIT STATUS
+.B base64
+returns status 0 if processing was completed without errors, 1 if an
+I/O error occurred or errors were detected in decoding a file which
+indicate it is incorrect or incomplete, and 2 if processing
+could not be performed at all due, for example, to a nonexistent input
+file.
+.SH FILES
+If no
+.I infile
+is specified or
+.I infile
+is a single ``\-'',
+.B base64
+reads from standard input; if no
+.I outfile
+is given, or
+.I outfile
+is a single ``\-'',
+output is sent to standard output.  The input and
+output are processed strictly serially; consequently
+.B base64
+may be used in pipelines.
+.SH BUGS
+Little or no error checking is done when decoding, other than
+validating that the input consists of a multiple of four
+characters in the encoding set.  This is inherent in the
+design of base64, which assumes transmission integrity is
+the responsibility of a higher-level protocol.
+.PP
+Please report bugs and documentation errors to
+.BR bugs@fourmilab.ch .
+.SH "SEE ALSO"
+.PD
+.BR uudecode (1),
+.BR uuencode (1),
+RFC1341
+.ne 4
+.SH AUTHOR
+.RS 5
+.nf
+John Walker
+http://www.fourmilab.ch/
+.fi
+.RE
+.PD
+.PP
+This software is in the public domain.
+Permission to use, copy, modify, and distribute this software and its
+documentation for any purpose and without fee is hereby granted,
+without any conditions or restrictions.  This software is provided ``as
+is'' without express or implied warranty.
+.PP
+This is version 1.4 of
+.BR base64 .
+The current version of this program may be downloaded from
+http://www.fourmilab.ch/webtools/base64.

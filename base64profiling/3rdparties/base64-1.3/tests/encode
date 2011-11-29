@@ -1,0 +1,72 @@
+#!/bin/sh
+
+# Copyright (C) 2004, 2005 Simon Josefsson.
+#
+# This file is part of Base64.
+#
+# Base64 is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+#
+# Base64 is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Base64; see the file COPYING.  If not, write to the Free
+# Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+# MA 02110-1301, USA.
+
+BASE64=../src/base64
+
+out=`$BASE64 ""`
+test "$?" != 0 &&
+  echo "Test 1 failed: $out" && exit 1
+test "$out" != "" &&
+  echo "Test 1 data failed: $out" && exit 1
+
+out=`$BASE64 a`
+test "$?" != 0 &&
+  echo "Test 2 failed: $out" && exit 1
+test "$out" != "YQ==" &&
+  echo "Test 2 data failed: $out" && exit 1
+
+out=`$BASE64 ab`
+test "$?" != 0 &&
+  echo "Test 3 failed: $out" && exit 1
+test "$out" != "YWI=" &&
+  echo "Test 3 data failed: $out" && exit 1
+
+out=`$BASE64 abc`
+test "$?" != 0 &&
+  echo "Test 4 failed: $out" && exit 1
+test "$out" != "YWJj" &&
+  echo "Test 4 data failed: $out" && exit 1
+
+out=`$BASE64 abcd`
+test "$?" != 0 &&
+  echo "Test 5 failed: $out" && exit 1
+test "$out" != "YWJjZA==" &&
+  echo "Test 5 data failed: $out" && exit 1
+
+out=`$BASE64 abcde`
+test "$?" != 0 &&
+  echo "Test 6 failed: $out" && exit 1
+test "$out" != "YWJjZGU=" &&
+  echo "Test 6 data failed: $out" && exit 1
+
+out=`$BASE64 abcdef`
+test "$?" != 0 &&
+  echo "Test 7 failed: $out" && exit 1
+test "$out" != "YWJjZGVm" &&
+  echo "Test 7 data failed: $out" && exit 1
+
+out=`$BASE64 abcdefg`
+test "$?" != 0 &&
+  echo "Test 8 failed: $out" && exit 1
+test "$out" != "YWJjZGVmZw==" &&
+  echo "Test 8 data failed: $out" && exit 1
+
+exit 0

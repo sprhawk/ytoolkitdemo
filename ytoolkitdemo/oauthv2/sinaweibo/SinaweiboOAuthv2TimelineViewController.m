@@ -29,7 +29,7 @@
 #import <ytoolkit/yoauth.h>
 #import <ytoolkit/ycocoaadditions.h>
 #import "ASIFormDataRequest.h"
-#import "SBJson.h"
+#import "SBJson/SBJson.h"
 #import "SinaweiboOAuthv2LoginSelectorViewController.h"
 
 @implementation SinaweiboOAuthv2TimelineViewController

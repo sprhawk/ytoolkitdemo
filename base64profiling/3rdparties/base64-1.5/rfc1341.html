@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html version="-//W3C//DTD HTML 3.2 Final//EN">
+<head>
+<title>RFC 1341 Excerpt: Base64 Encoding</title>
+<style type="text/css">
+    DIV.bodycopy {
+        margin-left: 15%;
+        margin-right: 10%
+    }
+</style>
+<meta name="keywords" content="Base64, RFC 1341, MIME">
+<meta name="description" content="RFC 1341 Excerpt: Base64 Encoding">
+<meta name="author" content="N. Borenstein, N. Freed">
+<meta name="robots" content="noindex">
+</head>
+<body bgcolor="#FFFFFF">
+
+<center>
+<table cols=2 width="65%">
+<tr>
+<td align=left>
+<font size="+1" face="Arial, Helvetica"><b>Network Working Group</b></font>
+<td align=right>
+<font size="+1" face="Arial, Helvetica"><b>N. Borenstein, Bellcore</b></font>
+<tr>
+<td align=left>
+<font size="+1" face="Arial, Helvetica"><b>Request for Comments: 1341</b></font>
+<td align=right>
+<font size="+1" face="Arial, Helvetica"><b>N. Freed, Innosoft</b></font>
+<tr>
+<td align=left>
+&nbsp;
+<td align=right>
+<font size="+1" face="Arial, Helvetica"><b>June 1992</b></font>
+<tr>
+<td colspan=2 align=center>
+<font size="+1" face="Arial, Helvetica"><b>
+MIME  (Multipurpose Internet Mail Extensions):
+
+<p>
+
+Mechanisms for Specifying and Describing <br>
+the Format of Internet Message Bodies
+</b></font>
+</table>
+
+<p>
+
+<em>The following excerpt from RFC 1341 defines Base64 encoding.</em>
+
+</center>
+
+<div class="bodycopy">
+
+<h3>5.2  Base64 Content-Transfer-Encoding</h3>
+
+The Base64 Content-Transfer-Encoding is designed to represent
+arbitrary sequences of octets in a form that is not humanly
+readable.  The encoding and decoding algorithms are simple, but
+the encoded data are consistently only about 33 percent larger
+than the unencoded data.  This encoding is based on the one used
+in Privacy Enhanced Mail applications, as defined in RFC 1113.
+The base64 encoding is adapted from RFC 1113, with one change:
+base64 eliminates the "*" mechanism for embedded clear text.
+
+<p>
+
+A 65-character subset of US-ASCII is used, enabling 6 bits to be
+represented per printable character.  (The extra 65th character,
+"=", is used to signify a special processing function.)
+
+<p>
+
+NOTE: This subset has the important property that it is
+represented identically in all versions of ISO 646, including US
+ASCII, and all characters in the subset are also represented
+identically in all versions of EBCDIC. Other popular encodings,
+such as the encoding used by the UUENCODE utility and the base85
+encoding specified as part of Level 2 PostScript, do not share
+these properties, and thus do not fulfill the portability
+requirements a binary transport encoding for mail must meet.
+
+<p>
+
+The encoding process represents 24-bit groups of input bits as
+output strings of 4 encoded characters.  Proceeding from left to
+right, a 24-bit input group is formed by concatenating 3 8-bit
+input groups.  These 24 bits are then treated as 4 concatenated
+6-bit groups, each of which is translated into a single digit in
+the base64 alphabet.  When encoding a bit stream via the base64
+encoding, the bit stream must be presumed to be ordered with the
+most- significant-bit first.  That is, the first bit in the
+stream will be the high-order bit in the first byte, and the
+eighth bit will be the low-order bit in the first byte, and so
+on.
+
+<p>
+
+Each 6-bit group is used as an index into an array of 64
+printable characters.  The character referenced by the index is
+placed in the output string.  These characters, identified in
+Table 1, below, are selected so as to be universally
+representable, and the set excludes characters with particular
+significance to SMTP (e.g., ".", "CR", "LF") and to the
+encapsulation boundaries defined in this document (e.g., "-").
+
+<p>
+
+<table align=center>
+<caption>
+<b>Table 1: The Base64 Alphabet</b>
+</caption>
+
+<tr><th> Value <th> Encoding <th> Value <th> Encoding <th> Value <th> Encoding <th> Value <th> Encoding
+<tr><td align=center> 0 <td align=center> A <td align=center>17 <td align=center>R <td align=center>34 <td align=center>i <td align=center>51 <td align=center>z
+<tr><td align=center> 1 <td align=center> B <td align=center> 18 <td align=center> S <td align=center> 35 <td align=center> j <td align=center> 52 <td align=center> 0
+<tr><td align=center> 2 <td align=center> C <td align=center> 19 <td align=center> T <td align=center> 36 <td align=center> k <td align=center> 53 <td align=center> 1
+<tr><td align=center> 3 <td align=center> D <td align=center> 20 <td align=center> U <td align=center> 37 <td align=center> l <td align=center> 54 <td align=center> 2
+<tr><td align=center> 4 <td align=center> E <td align=center> 21 <td align=center> V <td align=center> 38 <td align=center> m <td align=center> 55 <td align=center> 3
+<tr><td align=center> 5 <td align=center> F <td align=center> 22 <td align=center> W <td align=center> 39 <td align=center> n <td align=center> 56 <td align=center> 4
+<tr><td align=center> 6 <td align=center> G <td align=center> 23 <td align=center> X <td align=center> 40 <td align=center> o <td align=center> 57 <td align=center> 5
+<tr><td align=center> 7 <td align=center> H <td align=center> 24 <td align=center> Y <td align=center> 41 <td align=center> p <td align=center> 58 <td align=center> 6
+<tr><td align=center> 8 <td align=center> I <td align=center> 25 <td align=center> Z <td align=center> 42 <td align=center> q <td align=center> 59 <td align=center> 7
+<tr><td align=center> 9 <td align=center> J <td align=center> 26 <td align=center> a <td align=center> 43 <td align=center> r <td align=center> 60 <td align=center> 8
+<tr><td align=center> 10 <td align=center> K <td align=center> 27 <td align=center> b <td align=center> 44 <td align=center> s <td align=center> 61 <td align=center> 9
+<tr><td align=center> 11 <td align=center> L <td align=center> 28 <td align=center> c <td align=center> 45 <td align=center> t <td align=center> 62 <td align=center> +
+<tr><td align=center> 12 <td align=center> M <td align=center> 29 <td align=center> d <td align=center> 46 <td align=center> u <td align=center> 63 <td align=center> /
+<tr><td align=center> 13 <td align=center> N <td align=center> 30 <td align=center> e <td align=center> 47 <td align=center> v
+<tr><td align=center> 14 <td align=center> O <td align=center> 31 <td align=center> f <td align=center> 48 <td align=center> w <td align=center> (pad) <td align=center> =
+<tr><td align=center> 15 <td align=center> P <td align=center> 32 <td align=center> g <td align=center> 49 <td align=center> x
+<tr><td align=center> 16 <td align=center> Q <td align=center> 33 <td align=center> h <td align=center> 50 <td align=center> y
+
+</table>
+
+<p>
+
+The output stream (encoded bytes) must be represented in lines
+of no more than 76 characters each.  All line breaks or other
+characters not found in Table 1 must be ignored by decoding
+software.  In base64 data, characters other than those in Table
+1, line breaks, and other white space probably indicate a
+transmission error, about which a warning message or even a
+message rejection might be appropriate under some circumstances.
+
+<p>
+
+Special processing is performed if fewer than 24 bits are
+available at the end of the data being encoded. A full encoding
+quantum is always completed at the end of a body. When fewer
+than 24 input bits are available in an input group, zero bits
+are added (on the right) to form an integral number of 6-bit
+groups. Output character positions which are not required to
+represent actual input data are set to the character "=". Since
+all base64 input is an integral number of octets, only the
+following cases can arise: (1) the final quantum of encoding
+input is an integral multiple of 24 bits; here, the final unit
+of encoded output will be an integral multiple of 4 characters
+with no "=" padding, (2) the final quantum of encoding input is
+exactly 8 bits; here, the final unit of encoded output will be
+two characters followed by two "=" padding characters, or (3)
+the final quantum of encoding input is exactly 16 bits; here,
+the final unit of encoded output will be three characters
+followed by one "=" padding character.
+
+<p>
+
+Care must be taken to use the proper octets for line breaks if
+base64 encoding is applied directly to text material that has
+not been converted to canonical form. In particular, text line
+breaks should be converted into CRLF sequences prior to base64
+encoding. The important thing to note is that this may be done
+directly by the encoder rather than in a prior canonicalization
+step in some implementations.
+
+<p>
+
+NOTE: There is no need to worry about quoting apparent
+encapsulation boundaries within base64-encoded parts of
+multipart entities because no hyphen characters are used in the
+base64 encoding.
+
+</div>
+
+<h3><a href="./">Back to <cite>Base64</cite></a></h3>
+
+</body>
+</html>

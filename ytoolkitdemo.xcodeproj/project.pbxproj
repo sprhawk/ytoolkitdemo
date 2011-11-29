@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A53855C1484BA5300B31576 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98C51147D4FDE00D4488F /* UIKit.framework */; };
+		9A53855D1484BA5300B31576 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98C53147D4FDE00D4488F /* Foundation.framework */; };
+		9A53855E1484BA5300B31576 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE98C55147D4FDE00D4488F /* CoreGraphics.framework */; };
+		9A5385641484BA5300B31576 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A5385621484BA5300B31576 /* InfoPlist.strings */; };
+		9A5385661484BA5300B31576 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385651484BA5300B31576 /* main.m */; };
+		9A53856A1484BA5300B31576 /* YAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385691484BA5300B31576 /* YAppDelegate.m */; };
+		9A53856F1484BAC000B31576 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A53856E1484BAC000B31576 /* example.png */; };
+		9A5385C51484BBE300B31576 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385C31484BBE300B31576 /* base64.c */; };
+		9A5385C81484BBF000B31576 /* cdecode.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385C61484BBF000B31576 /* cdecode.c */; };
+		9A5385C91484BBF000B31576 /* cencode.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385C71484BBF000B31576 /* cencode.c */; };
+		9A5385D71484BC2E00B31576 /* libybase64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB952E1483A87B007E22DF /* libybase64.a */; };
+		9A5385D81484BC2E00B31576 /* libybase64additions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB95301483A87B007E22DF /* libybase64additions.a */; };
+		9A5385D91484BD4900B31576 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385D01484BC0A00B31576 /* NSData+Base64.m */; };
 		9AABEA39147FB37C00A678B3 /* TwitterClientCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABEA38147FB37C00A678B3 /* TwitterClientCredentials.m */; };
 		9AABEA3C147FB3FD00A678B3 /* TwitterTimelineListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABEA3B147FB3FD00A678B3 /* TwitterTimelineListViewController.m */; };
 		9AC0C4D6147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C4D4147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m */; };
@@ -73,6 +86,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A5385D31484BC2400B31576 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AEB951B1483A87A007E22DF /* ytoolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A09913A147B9D6C005FBF4B;
+			remoteInfo = ybase64;
+		};
+		9A5385D51484BC2400B31576 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AEB951B1483A87A007E22DF /* ytoolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A0991DA147BA274005FBF4B;
+			remoteInfo = ybase64additions;
+		};
 		9AEB952D1483A87B007E22DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AEB951B1483A87A007E22DF /* ytoolkit.xcodeproj */;
@@ -188,6 +215,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A53855A1484BA5300B31576 /* base64profiling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = base64profiling.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A5385611484BA5300B31576 /* base64profiling-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "base64profiling-Info.plist"; sourceTree = "<group>"; };
+		9A5385631484BA5300B31576 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A5385651484BA5300B31576 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9A5385671484BA5300B31576 /* base64profiling-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "base64profiling-Prefix.pch"; sourceTree = "<group>"; };
+		9A5385681484BA5300B31576 /* YAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YAppDelegate.h; sourceTree = "<group>"; };
+		9A5385691484BA5300B31576 /* YAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAppDelegate.m; sourceTree = "<group>"; };
+		9A53856E1484BAC000B31576 /* example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example.png; sourceTree = "<group>"; };
+		9A5385C31484BBE300B31576 /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = base64.c; path = "3rdparties/base64-1.3/lib/base64.c"; sourceTree = "<group>"; };
+		9A5385C41484BBE300B31576 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base64.h; path = "3rdparties/base64-1.3/lib/base64.h"; sourceTree = "<group>"; };
+		9A5385C61484BBF000B31576 /* cdecode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cdecode.c; path = "3rdparties/libb64-1.2/src/cdecode.c"; sourceTree = "<group>"; };
+		9A5385C71484BBF000B31576 /* cencode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cencode.c; path = "3rdparties/libb64-1.2/src/cencode.c"; sourceTree = "<group>"; };
+		9A5385CC1484BBF700B31576 /* cdecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cdecode.h; sourceTree = "<group>"; };
+		9A5385CD1484BBF700B31576 /* cencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cencode.h; sourceTree = "<group>"; };
+		9A5385CE1484BBF700B31576 /* decode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decode.h; sourceTree = "<group>"; };
+		9A5385CF1484BBF700B31576 /* encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = encode.h; sourceTree = "<group>"; };
+		9A5385D01484BC0A00B31576 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "3rdparties/NSData+Base64.m"; sourceTree = "<group>"; };
+		9A5385D11484BC0A00B31576 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "3rdparties/NSData+Base64.h"; sourceTree = "<group>"; };
 		9AABEA37147FB37C00A678B3 /* TwitterClientCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterClientCredentials.h; sourceTree = "<group>"; };
 		9AABEA38147FB37C00A678B3 /* TwitterClientCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterClientCredentials.m; sourceTree = "<group>"; };
 		9AABEA3A147FB3FD00A678B3 /* TwitterTimelineListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTimelineListViewController.h; sourceTree = "<group>"; };
@@ -297,6 +342,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9A5385571484BA5300B31576 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A5385D71484BC2E00B31576 /* libybase64.a in Frameworks */,
+				9A5385D81484BC2E00B31576 /* libybase64additions.a in Frameworks */,
+				9A53855C1484BA5300B31576 /* UIKit.framework in Frameworks */,
+				9A53855D1484BA5300B31576 /* Foundation.framework in Frameworks */,
+				9A53855E1484BA5300B31576 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AE98C4A147D4FDE00D4488F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,6 +378,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A53855F1484BA5300B31576 /* base64profiling */ = {
+			isa = PBXGroup;
+			children = (
+				9A5385C01484BBB600B31576 /* 3rdparties */,
+				9A53856E1484BAC000B31576 /* example.png */,
+				9A5385681484BA5300B31576 /* YAppDelegate.h */,
+				9A5385691484BA5300B31576 /* YAppDelegate.m */,
+				9A5385601484BA5300B31576 /* Supporting Files */,
+			);
+			path = base64profiling;
+			sourceTree = "<group>";
+		};
+		9A5385601484BA5300B31576 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A5385611484BA5300B31576 /* base64profiling-Info.plist */,
+				9A5385621484BA5300B31576 /* InfoPlist.strings */,
+				9A5385651484BA5300B31576 /* main.m */,
+				9A5385671484BA5300B31576 /* base64profiling-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A5385C01484BBB600B31576 /* 3rdparties */ = {
+			isa = PBXGroup;
+			children = (
+				9A5385D01484BC0A00B31576 /* NSData+Base64.m */,
+				9A5385D11484BC0A00B31576 /* NSData+Base64.h */,
+				9A5385C21484BBC600B31576 /* GNUCoreUtils-base64 */,
+				9A5385C11484BBBD00B31576 /* libb64 */,
+			);
+			name = 3rdparties;
+			sourceTree = "<group>";
+		};
+		9A5385C11484BBBD00B31576 /* libb64 */ = {
+			isa = PBXGroup;
+			children = (
+				9A5385CA1484BBF700B31576 /* include */,
+				9A5385C61484BBF000B31576 /* cdecode.c */,
+				9A5385C71484BBF000B31576 /* cencode.c */,
+			);
+			name = libb64;
+			sourceTree = "<group>";
+		};
+		9A5385C21484BBC600B31576 /* GNUCoreUtils-base64 */ = {
+			isa = PBXGroup;
+			children = (
+				9A5385C31484BBE300B31576 /* base64.c */,
+				9A5385C41484BBE300B31576 /* base64.h */,
+			);
+			name = "GNUCoreUtils-base64";
+			sourceTree = "<group>";
+		};
+		9A5385CA1484BBF700B31576 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				9A5385CB1484BBF700B31576 /* b64 */,
+			);
+			name = include;
+			path = "3rdparties/libb64-1.2/include";
+			sourceTree = "<group>";
+		};
+		9A5385CB1484BBF700B31576 /* b64 */ = {
+			isa = PBXGroup;
+			children = (
+				9A5385CC1484BBF700B31576 /* cdecode.h */,
+				9A5385CD1484BBF700B31576 /* cencode.h */,
+				9A5385CE1484BBF700B31576 /* decode.h */,
+				9A5385CF1484BBF700B31576 /* encode.h */,
+			);
+			path = b64;
+			sourceTree = "<group>";
+		};
 		9AABEA36147FB36500A678B3 /* twitter */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +547,7 @@
 			children = (
 				9AE98C57147D4FDE00D4488F /* ytoolkitdemo */,
 				9AE98CA0147D616200D4488F /* Dependencies */,
+				9A53855F1484BA5300B31576 /* base64profiling */,
 				9AE98C50147D4FDE00D4488F /* Frameworks */,
 				9AE98C4E147D4FDE00D4488F /* Products */,
 			);
@@ -426,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE98C4D147D4FDE00D4488F /* ytoolkitdemo.app */,
+				9A53855A1484BA5300B31576 /* base64profiling.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -611,6 +743,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9A5385591484BA5300B31576 /* base64profiling */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A53856B1484BA5300B31576 /* Build configuration list for PBXNativeTarget "base64profiling" */;
+			buildPhases = (
+				9A5385561484BA5300B31576 /* Sources */,
+				9A5385571484BA5300B31576 /* Frameworks */,
+				9A5385581484BA5300B31576 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A5385D41484BC2400B31576 /* PBXTargetDependency */,
+				9A5385D61484BC2400B31576 /* PBXTargetDependency */,
+			);
+			name = base64profiling;
+			productName = base64profiling;
+			productReference = 9A53855A1484BA5300B31576 /* base64profiling.app */;
+			productType = "com.apple.product-type.application";
+		};
 		9AE98C4C147D4FDE00D4488F /* ytoolkitdemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AE98C65147D4FDE00D4488F /* Build configuration list for PBXNativeTarget "ytoolkitdemo" */;
@@ -661,6 +812,7 @@
 			projectRoot = "";
 			targets = (
 				9AE98C4C147D4FDE00D4488F /* ytoolkitdemo */,
+				9A5385591484BA5300B31576 /* base64profiling */,
 			);
 		};
 /* End PBXProject section */
@@ -781,6 +933,14 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9A5385581484BA5300B31576 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A5385641484BA5300B31576 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AE98C4B147D4FDE00D4488F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -793,12 +953,26 @@
 				9AEB94AD14822F54007E22DF /* SinaweiboOAuthv1LoginViewController.xib in Resources */,
 				9AEB94C814829AAA007E22DF /* QQweiboOAuthv1LoginViewController.xib in Resources */,
 				9AEB94FA1482BB3F007E22DF /* FlickrLoginViewController.xib in Resources */,
+				9A53856F1484BAC000B31576 /* example.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9A5385561484BA5300B31576 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A5385661484BA5300B31576 /* main.m in Sources */,
+				9A53856A1484BA5300B31576 /* YAppDelegate.m in Sources */,
+				9A5385C51484BBE300B31576 /* base64.c in Sources */,
+				9A5385C81484BBF000B31576 /* cdecode.c in Sources */,
+				9A5385C91484BBF000B31576 /* cencode.c in Sources */,
+				9A5385D91484BD4900B31576 /* NSData+Base64.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AE98C49147D4FDE00D4488F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -849,7 +1023,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9A5385D41484BC2400B31576 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ybase64;
+			targetProxy = 9A5385D31484BC2400B31576 /* PBXContainerItemProxy */;
+		};
+		9A5385D61484BC2400B31576 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ybase64additions;
+			targetProxy = 9A5385D51484BC2400B31576 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		9A5385621484BA5300B31576 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A5385631484BA5300B31576 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		9AE98C5A147D4FDE00D4488F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -861,6 +1056,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9A53856C1484BA5300B31576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "base64profiling/base64profiling-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${BUILT_PRODUCTS_DIR}/**";
+				INFOPLIST_FILE = "base64profiling/base64profiling-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9A53856D1484BA5300B31576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "base64profiling/base64profiling-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${BUILT_PRODUCTS_DIR}/**";
+				INFOPLIST_FILE = "base64profiling/base64profiling-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		9AE98C63147D4FDE00D4488F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -953,6 +1184,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9A53856B1484BA5300B31576 /* Build configuration list for PBXNativeTarget "base64profiling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A53856C1484BA5300B31576 /* Debug */,
+				9A53856D1484BA5300B31576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9AE98C47147D4FDE00D4488F /* Build configuration list for PBXProject "ytoolkitdemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

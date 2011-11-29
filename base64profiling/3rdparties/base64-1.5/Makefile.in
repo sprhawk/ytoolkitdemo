@@ -1,0 +1,227 @@
+
+#   Development tree name for this version
+PRODUCT = @PRODUCT@
+VERSION = @VERSION@
+TREE = $(PRODUCT)-$(VERSION)
+
+#   Utilities used in building the program
+SHELL = /bin/sh
+CC = @CC@
+CTANGLE = ctangle
+CWEAVE = cweave
+DVIPS = dvips
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@
+INSTALL_DATA = @INSTALL_DATA@
+PDFTEX = pdftex
+TEX = tex
+XDVI = xdvi
+
+#   Utility options
+CFLAGS = @CFLAGS@
+LDFLAGS = @LDFLAGS@
+
+#   Targets
+PROGS = base64
+DOCUMENTS = base64.tex base64.pdf
+
+#   Installation destinations
+
+## The 'DESTDIR' variable allows you to install the program into a different
+## location, e.g., for packaging, without affecting the compiled-in pathnames.
+DESTDIR =
+
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+bindir = @bindir@
+mandir = @mandir@
+man1dir = $(mandir)/man1
+man1ext = .1
+BINDIR = $(DESTDIR)$(bindir)
+MAN1DIR = $(DESTDIR)$(man1dir)
+
+prog:	$(PROGS)
+
+doc:	$(DOCUMENTS)
+
+all:	$(PROGS) $(DOCUMENTS)
+
+#   Build executable program
+
+base64: base64.o getopt.o
+	$(CC) base64.o getopt.o -o base64 $(CFLAGS) $(LDFLAGS)
+
+#   Create C source from web
+
+base64.c: base64.w
+	$(CTANGLE) base64.w
+
+#   Build TeX documentation file from web
+
+base64.tex: base64.w
+	$(CWEAVE) base64.w
+
+#   Create TeX .dvi file of documentation
+
+base64.dvi: base64.tex
+	$(TEX) base64.tex
+
+#   View TeX documentation
+
+viewdoc: base64.dvi
+	$(XDVI) base64
+
+#   Build PostScript file to print program
+
+base64.ps:  base64.dvi
+	$(DVIPS) -f base64.dvi >base64.ps
+
+#   Build PDF file of program and documentation
+base64.pdf: base64.tex
+	$(PDFTEX) base64.tex
+
+#   Build auto-configuration scripts
+
+configurator:
+	rm -rf autom4te.cache
+	rm -f config.cache
+	autoconf
+
+#   Installation
+
+install-bin: $(BINDIR) base64
+	$(INSTALL_PROGRAM) base64 $(BINDIR)/base64
+
+install-man: base64.1
+	$(INSTALL_DATA) base64.1 $(MAN1DIR)/base64$(man1ext)
+
+install: install-bin install-man
+
+#   Uninstallation
+
+uninstall:
+	rm -f $(BINDIR)/base64 $(MAN1DIR)/base64$(man1ext)
+
+#   There are a variety of levels of cleanliness
+#
+#	clean:	Remove object code, but leave C and TeX extracts from web
+#		and generated documentation.  The current build configuration
+#		is preserved.
+clean:
+	rm -f $(PROGS) *.o *.bak *.shar *.zip *.tar.gz *.dvi core *.out \
+	      *.log
+#
+#	distclean:  Remove everything not present in the distribution.
+#		    This wipes out the build configuration; you must
+#		    re-run ./configure before rebuilding.
+distclean:  clean
+	rm -rf autom4te.cache
+	rm -f config.cache config.h Makefile config.log config.status
+	rm -f base64.tex base64.idx base64.scn base64.toc
+#
+#	maintainer-clean:  Remove everything derivative from the
+#			   master web.	We don't delete base64.c
+#			   because that causes configure to fail.
+maintainer-clean: distclean
+	@echo 'This command is intended for maintainers to use; it'
+	@echo 'deletes files that may need special tools to rebuild.'
+	rm -f *.ps *.pdf
+
+#   Create distribution archives
+
+ARCH_SOURCE = Makefile.in base64.c base64.w config.h.in getopt.c getopt.h
+ARCH_DOC = base64.1 index.html b64.png rfc1341.html rfc1341.txt base64.pdf \
+	   COPYING INSTALL README log.txt
+ARCH_BIN = base64.exe
+ARCH_CONF = configure configure.in install-sh
+ARCH_WIN32 = base64.vcproj base64.sln testw32.bat
+
+ARCH_FILES = $(ARCH_SOURCE) $(ARCH_DOC) $(ARCH_BIN) $(ARCH_CONF) $(ARCH_WIN32)
+
+dist:
+	#   Make zipped archive of Win32 executable
+	rm -f base64.zip
+	zip base64.zip $(ARCH_BIN)
+	#   Make gzipped tar archive of complete distribution
+	rm -f $(TREE).tar.gz
+	rm -rf $(TREE)
+	mkdir $(TREE)
+	chmod 777 $(TREE)
+	@echo "Copying distribution files"
+	@for file in $(ARCH_FILES); do \
+	    cp -p $$file $(TREE); \
+	done
+	tar cfv $(TREE).tar $(TREE)
+	gzip $(TREE).tar
+	rm -rf $(TREE)
+
+#   Check for lint
+
+lint:	base64.c
+	lint base64.c
+
+#   View manual page
+
+manpage:
+	nroff -man base64.1 | $(PAGER)
+
+#   Print manual page
+
+printman:
+	ptroff -man base64.1
+
+# Test it
+
+check:	base64
+	./base64 --encode <base64 >/tmp/base641.bak
+	./base64 --decode </tmp/base641.bak >/tmp/base642.bak
+	-cmp -s base64 /tmp/base642.bak ; if test $$? -ne 0  ; then \
+	    echo '** base64:  Redirection test failed. **' ; else \
+	./base64 -e base64 /tmp/base641.bak ;\
+	./base64 -d /tmp/base641.bak /tmp/base642.bak ;\
+	cmp -s base64 /tmp/base642.bak ; if test $$? -ne 0  ; then \
+	    echo '** base64:  Command line file argument test failed. **' ; else \
+	    echo 'All tests passed.' ; fi ; fi
+	@rm /tmp/base641.bak /tmp/base642.bak
+
+# Really test it
+
+wringer: base64
+	@echo 'This test performs 13 nested encodes and decodes starting'
+	@echo 'the application source and compares the result to the'
+	@echo 'original file.'
+	./base64 -e base64.c /tmp/base641.bak		# E  1
+	./base64 -e /tmp/base641.bak /tmp/base642.bak	# E  2
+	./base64 -e /tmp/base642.bak /tmp/base643.bak	# E  3
+	./base64 -e /tmp/base643.bak /tmp/base644.bak	# E  4
+	./base64 -e /tmp/base644.bak /tmp/base645.bak	# E  5
+	./base64 -e /tmp/base645.bak /tmp/base646.bak	# E  6
+	./base64 -e /tmp/base646.bak /tmp/base647.bak	# E  7
+	./base64 -e /tmp/base647.bak /tmp/base648.bak	# E  8
+	./base64 -e /tmp/base648.bak /tmp/base649.bak	# E  9
+	./base64 -e /tmp/base649.bak /tmp/base64a.bak	# E 10
+	./base64 -e /tmp/base64a.bak /tmp/base64b.bak	# E 11
+	./base64 -e /tmp/base64b.bak /tmp/base64c.bak	# E 12
+	./base64 -e /tmp/base64c.bak /tmp/base64d.bak	# E 13
+	#
+	./base64 -d /tmp/base64d.bak /tmp/dase64c.bak	# D  1
+	./base64 -d /tmp/dase64c.bak /tmp/dase64b.bak	# D  2
+	./base64 -d /tmp/dase64b.bak /tmp/dase64a.bak	# D  3
+	./base64 -d /tmp/dase64a.bak /tmp/dase649.bak	# D  4
+	./base64 -d /tmp/dase649.bak /tmp/dase648.bak	# D  5
+	./base64 -d /tmp/dase648.bak /tmp/dase647.bak	# D  6
+	./base64 -d /tmp/dase647.bak /tmp/dase646.bak	# D  7
+	./base64 -d /tmp/dase646.bak /tmp/dase645.bak	# D  8
+	./base64 -d /tmp/dase645.bak /tmp/dase644.bak	# D  9
+	./base64 -d /tmp/dase644.bak /tmp/dase643.bak	# D 10
+	./base64 -d /tmp/dase643.bak /tmp/dase642.bak	# D 11
+	./base64 -d /tmp/dase642.bak /tmp/dase641.bak	# D 13
+	./base64 -d /tmp/dase641.bak /tmp/dase640.bak	# D 13
+	#
+	-cmp -s /tmp/dase640.bak base64.c ; if test $$? -ne 0  ; then \
+	    echo '** base64 Wringer test failed. **' ; else \
+	    echo 'Wringer test passed.' ; fi
+	@rm /tmp/base64?.bak /tmp/dase64?.bak
+
+.SUFFIXES:
+.SUFFIXES: .c .o .ch .dvi .tex .w .1

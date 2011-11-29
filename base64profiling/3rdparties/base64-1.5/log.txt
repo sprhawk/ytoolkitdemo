@@ -1,0 +1,45 @@
+    	    	    	Base64 Development Log
+			
+2005 April 13
+
+Working version changed to 1.4.
+
+Modified Makefile.in to use the system's installation of
+Autoconf rather than a special one hard-coded in a
+private directory.  Remade ./configure with Autoconf 2.59.
+
+Converted the HTML page title image from GIF to PNG.  Added
+some XHTML quotes to image attributes in index.html.
+
+2005 December 21
+
+Completed conversion of the HTML document to XHTML 1.0 and
+validated.
+
+Added "Send Feedback" and Validate XHTML buttons.
+
+Release 1.4.
+
+2007 June 10
+
+Working version changed to 1.5.
+
+When encoding with FORCE_BINARY_IO mode in effect, the explicit "\r\n"
+end of line sequence caused double carriage returns in the output,
+because the output text file is subject to expansion of LF to CR/LF
+line terminators.  I made the "eol" sequence conditional on
+FORCE_BINARY, so that just a line feed is written to streams
+which will expand it.  (Reported by Lee Bradley.)
+
+Built a new Windows binary with Visual C .NET.  The base64.sln
+and base64.vcproj files used for this build have been added to
+the source distribution, along with a testw32.bat file which
+performs a rudimentary test of the Debug and Release builds
+of the WIN32 edition.  Note that when building the WIN32
+version, the config.h file created by the Linux ./configure
+script must be hand-edited to comment out the definitions of
+HAVE_GETOPT and HAVE_UNISTD_H.
+
+Release 1.5.
+
+

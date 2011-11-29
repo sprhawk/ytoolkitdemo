@@ -1,0 +1,43 @@
+BASE64 NEWS -- History of user-visible changes.
+Copyright (C) 2004, 2005 Simon Josefsson
+See the end for copying conditions.
+
+* Version 1.3 (released 2005-06-24)
+
+** License were updated to reflect new FSF address.
+
+* Version 1.2 (released 2005-01-04)
+
+** A man page for the tool has been added.
+
+** The data to convert can now be taken from command line argument.
+As in `base64 foo'.
+
+** The tool now print a banner at startup, that can be disabled via --quiet.
+When built on a system that has isatty(3) (e.g., any POSIX platform)
+it will also be disabled when the standard output is not a TTY.
+
+** The help text for -w and --wrap has been improved.
+This is to clarify that -w do not take an optional parameter.
+
+** Swedish translation added.
+
+** More self tests.
+
+* Version 1.1 (released 2004-12-28)
+
+** The -w and --wrap parameters should now work properly.
+
+* Version 1.0 (released 2004-12-28)
+
+** Initial release.
+
+----------------------------------------------------------------------
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+;;; Local Variables: ***
+;;; mode:outline ***
+;;; mode:flyspell ***
+;;; End: ***

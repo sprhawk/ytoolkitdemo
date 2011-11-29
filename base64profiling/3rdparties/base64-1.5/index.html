@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Base64: Encode and Decode Base64 Files</title>
+<style type="text/css">
+    body {
+        margin-left: 15%;
+        margin-right: 10%;
+	background-color: #FFFFFF;
+	color: #000000;
+    }
+    
+    dt {
+    	margin-top: 1ex;
+    }
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="Base64, encode, decode, utility, RFC 1341, MIME" />
+<meta name="description" content="Base64: Encode and Decode Base64 Files" />
+<meta name="author" content="John Walker" />
+<meta name="robots" content="index" />
+<meta name="robots" content="nofollow" />
+</head>
+
+<body>
+
+<center>
+<h1><img src="b64.png" width="512" height="144"
+    	 alt="Base64: Encode and Decode Base64 Files" /></h1>
+</center>
+
+<hr />
+
+<p>
+
+This page describes, in Unix manual page style,
+a program
+<a href="#Download">available for downloading</a> from this site
+which encodes binary files in the "Base64" format used by
+MIME-encoded documents such as electronic mail messages with
+embedded images and audio files.
+</p>
+
+<h3>NAME</h3>
+<blockquote>
+     <b>base64</b> - encode and decode base64 files
+</blockquote>
+
+<h3>SYNOPSIS</h3>
+<blockquote>
+     <tt>base64</tt> [ <tt>-d</tt> /  <tt>-e</tt> ]
+           [ <em>options</em> ] [ <em>infile</em> ] [ <em>outfile</em> ]
+</blockquote>
+
+<h3>DESCRIPTION</h3>
+
+<p>
+The MIME (Multipurpose Internet Mail Extensions) specification
+(<a href="rfc1341.html">RFC 1341</a> and successors)
+defines a mechanism for encoding arbitrary binary
+information for transmission by electronic mail.  Triplets of 8-bit
+octets are encoded as groups of four characters, each representing 6
+bits of the source 24 bits.  Only characters present in all variants
+of ASCII and EBCDIC are used, avoiding incompatibilities in other
+forms of encoding such as <b>uuencode</b>/<b>uudecode</b>.
+</p>
+
+<p>
+<b>base64</b>
+is a command line utility which encodes and decodes files in this format.
+It can be used within a pipeline as an encoding or decoding filter,
+and is most commonly used in this manner as part of an automated
+mail processing system.
+</p>
+
+<h3>OPTIONS</h3>
+<dl compact="compact">
+
+<dt><b>--copyright</b></dt>
+<dd>
+Print copyright information.
+</dd>
+
+<dt><b>-d</b>, <b>--decode</b></dt>
+<dd>
+Decodes the input, previously created by
+<b>base64</b>,
+to recover the original input file.
+</dd>
+
+<dt><b>-e</b>, <b>--encode</b></dt>
+<dd>
+Encodes the input into an output text file containing
+its base64 encoding.
+</dd>
+
+<dt><b>-n</b>, <b>--noerrcheck</b></dt>
+<dd>
+Suppress error checking when decoding.  By default, upon encountering
+a non white space character which does not belong to the base64
+set, or discovering the input file is incorrectly padded to a
+multiple of four characters, <b>base64</b> issues an error
+message and terminates
+processing with exit status 1.  The
+<b>-n</b>
+option suppresses even this rudimentary error checking; invalid
+characters are silently ignored and the output truncated to the
+last three valid octets if the input is incorrectly padded.
+</dd>
+
+<dt><b>-u</b>, <b>--help</b></dt>
+<dd> Print how to call information and a summary of options.
+</dd>
+
+<dt><b>--version</b></dt>
+<dd>Print program version information.
+</dd>
+</dl>
+
+<h3>EXIT STATUS</h3>
+
+<p>
+<b>base64</b>
+returns status 0 if processing was completed without errors, 1 if an
+I/O error occurred or errors were detected in decoding a file which
+indicate it is incorrect or incomplete, and 2 if processing
+could not be performed at all due, for example, to a nonexistent input
+file.
+</p>
+
+<h3><a name="files">FILES</a></h3>
+
+<p>
+If no <i>infile</i> is specified or <i>infile</i> is a single "-",
+<b>base64</b> reads from standard input; if no <i>outfile</i> is
+given, or <i>outfile</i> is a single "-", output is sent to standard
+output.  The input and output are processed strictly serially;
+consequently <b>base64</b> may be used in pipelines.
+</p>
+
+<h3>BUGS</h3>
+
+<p>
+Little or no error checking is done when decoding, other than
+validating that the input consists of a multiple of four
+characters in the encoding set.  This is inherent in the
+design of base64, which assumes transmission integrity is
+the responsibility of a higher-level protocol.
+</p>
+
+<h3>SEE ALSO</h3>
+     <b>uudecode</b>(1), <b>uuencode</b>(1), <a href="rfc1341.html">RFC&nbsp;1341</a>
+
+<h2><a name="Download" href="base64-1.4.tar.gz"><img src="/images/icons/file.gif"
+    alt="" align="middle" width="40" height="40" border="0" /></a>
+    <a href="base64-1.4.tar.gz">Download base64-1.4.tar.gz</a> (Gzipped TAR archive)</h2>
+
+The archive contains source code for the utility, a Makefile
+for Unix systems, and a ready-to-run executable for 32-bit
+Windows platforms.  Windows users may also download
+<a href="base64.zip"><b><tt>base64.zip</tt></b></a>, a
+ZIPped archive containing the Windows executable.
+
+<h3><a href="base64.pdf">Read <b>base64</b> source code</a> (requires
+    	<a href="http://www.adobe.com/acrobat/readstep.html" target="_blank">Acrobat Reader</a>)</h3>
+
+<h3>AUTHOR</h3>
+<address>
+          <a href="/">John Walker</a>
+<br />
+          <a href="/">http://www.fourmilab.ch/</a>
+</address>
+
+<p>
+Christian Ferrari contributed code which permits the <b>base64</b>
+utility to work on EBCDIC based systems such as
+UNIX Services for OS/390 2.7 (ESA/390).
+</p>
+
+<blockquote>
+     This software is in the public domain.  Permission to use, copy,
+     modify, and distribute this software and its documentation for
+     any purpose and without fee is hereby granted, without any
+     conditions or restrictions.  This software is provided "as is"
+     without express or implied warranty.
+</blockquote>
+
+<p />
+<hr />
+<p />
+<table align="right">
+<tr><td align="center">
+<form name="feedback" method="post" action="/cgi-bin/FeedbackForm.pl">
+<input type="hidden" name="pagetitle" value="&lt;cite&gt;Base64&lt;/cite&gt;" />
+<input type="hidden" name="backlink" value="Back to &lt;cite&gt;Base64&lt;/cite&gt;" />
+<input type="submit" value=" Send Feedback " />
+</form>
+</td></tr>
+<tr><td align="center">
+    <a href="http://validator.w3.org/check?uri=referer"
+       target="FourmilabValidation"><img
+       src="/images/icons/valid-xhtml10.png"
+       alt="Valid XHTML 1.0" height="31" width="88"
+       border="0" /></a>
+</td></tr>
+</table>
+<address>
+by <a href="/">John Walker</a><br />
+December 21st, 2005<br />
+Version 1.4<br />
+The latest version of this program is available from:<br />
+<a href="http://www.fourmilab.ch/webtools/base64/">http://www.fourmilab.ch/webtools/base64/</a>.
+</address>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+# Swedish translations for base64 package.
+# Copyright (C) 2005 Simon Josefsson
+# This file is distributed under the same license as the base64 package.
+# Simon Josefsson <simon@josefsson.org>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: base64 1.2\n"
+"Report-Msgid-Bugs-To: simon@josefsson.org\n"
+"POT-Creation-Date: 2005-06-24 16:05+0200\n"
+"PO-Revision-Date: 2005-01-04 02:20+0100\n"
+"Last-Translator: Simon Josefsson <simon@josefsson.org>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "Försök med `%s --help' för mer information.\n"
+
+#, c-format
+msgid ""
+"Usage: %s [OPTION] [STRING]\n"
+"Base64 encode or decode STRING, or standard input, to standard output.\n"
+"\n"
+msgstr ""
+"Användning: %s [FLAGGA] [STRÄNG]\n"
+"Bas64-koda STRÄNG, eller standard in, till standard ut.\n"
+"\n"
+
+msgid ""
+"  -w                    Wrap encoded lines after 76 characters.\n"
+"      --wrap[=COLS]     Wrap encoded lines after COLS character (default "
+"76).\n"
+"\n"
+"  -d, --decode          Decode data.\n"
+"      --ignore-garbage  When decoding, ignore non-alphabet characters.\n"
+"\n"
+msgstr ""
+"  -w                    Bryt kodade rader efter 76 tecken.\n"
+"      --wrap[=COL]      Bryt kodade rader efter COL tecken (normalvärde "
+"76).\n"
+"\n"
+"  -d, --decode          Avkoda data.\n"
+"      --ignore-garbage  Ignorera okända tecken under avkodning.\n"
+"\n"
+
+msgid ""
+"  -q, --quiet, --silent\n"
+"                        Don't print initial banner.\n"
+"\n"
+msgstr ""
+"  -q, --quiet, --silent\n"
+"                        Skriv inte ut rubrik när programmet startar.\n"
+"\n"
+
+msgid ""
+"      --help            Display this help and exit.\n"
+"      --version         Output version information and exit.\n"
+msgstr ""
+"      --help            Visa denna hjälptext och avsluta.\n"
+"      --version         Visa versionsinformation och avsluta.\n"
+
+msgid ""
+"\n"
+"The data is encoded as described for the base64 alphabet in RFC 3548.\n"
+"Decoding require compliant input by default, use --ignore-garbage to\n"
+"attempt to recover from non-alphabet characters (such as newlines) in\n"
+"the encoded stream.\n"
+msgstr ""
+"\n"
+"Data är kodat för bas64-alfabetet som beskrivet i RFC 3548.\n"
+"Avkodning kräver att indata är på korrekt form, men --ignore-garbage\n"
+"kan användas för att ignorerra okända tecken (t.ex. radbrott) i det\n"
+"kodade indatat.\n"
+
+#, c-format
+msgid ""
+"\n"
+"Report bugs to <%s>.\n"
+msgstr ""
+"\n"
+"Rapportera fel till <%s>.\n"
+"Rapportera kommentarer om översättningen till <sv@li.org>.\n"
+
+msgid "write error"
+msgstr "skrivfel"
+
+msgid "read too much"
+msgstr "läste för mycket"
+
+msgid "read error"
+msgstr "läsfel"
+
+msgid "invalid input"
+msgstr "felaktig indata"
+
+#, c-format
+msgid "invalid wrap size: %s"
+msgstr "felaktig radbrytningsvärde: %s"
+
+#, c-format
+msgid "extra operand %s"
+msgstr "extra operand %s"
+
+#, c-format
+msgid ""
+"%s %s\n"
+"Copyright 2004, 2005 Simon Josefsson.\n"
+"Base64 comes with NO WARRANTY, to the extent permitted by law.\n"
+"You may redistribute copies of Base64 under the terms of the GNU\n"
+"General Public License.  For more information about these matters,\n"
+"see the file named COPYING.\n"
+msgstr ""
+"%s %s\n"
+"Copyright 2004, 2005 Simon Josefsson.\n"
+"Base64 comes with NO WARRANTY, to the extent permitted by law.\n"
+"You may redistribute copies of Base64 under the terms of the GNU\n"
+"General Public License.  For more information about these matters,\n"
+"see the file named COPYING.\n"
+
+msgid "standard input"
+msgstr "standard in"

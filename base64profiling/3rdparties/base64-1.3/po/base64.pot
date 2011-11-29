@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Simon Josefsson
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: simon@josefsson.org\n"
+"POT-Creation-Date: 2005-06-24 16:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr ""
+
+#, c-format
+msgid ""
+"Usage: %s [OPTION] [STRING]\n"
+"Base64 encode or decode STRING, or standard input, to standard output.\n"
+"\n"
+msgstr ""
+
+msgid ""
+"  -w                    Wrap encoded lines after 76 characters.\n"
+"      --wrap[=COLS]     Wrap encoded lines after COLS character (default "
+"76).\n"
+"\n"
+"  -d, --decode          Decode data.\n"
+"      --ignore-garbage  When decoding, ignore non-alphabet characters.\n"
+"\n"
+msgstr ""
+
+msgid ""
+"  -q, --quiet, --silent\n"
+"                        Don't print initial banner.\n"
+"\n"
+msgstr ""
+
+msgid ""
+"      --help            Display this help and exit.\n"
+"      --version         Output version information and exit.\n"
+msgstr ""
+
+msgid ""
+"\n"
+"The data is encoded as described for the base64 alphabet in RFC 3548.\n"
+"Decoding require compliant input by default, use --ignore-garbage to\n"
+"attempt to recover from non-alphabet characters (such as newlines) in\n"
+"the encoded stream.\n"
+msgstr ""
+
+#, c-format
+msgid ""
+"\n"
+"Report bugs to <%s>.\n"
+msgstr ""
+
+msgid "write error"
+msgstr ""
+
+msgid "read too much"
+msgstr ""
+
+msgid "read error"
+msgstr ""
+
+msgid "invalid input"
+msgstr ""
+
+#, c-format
+msgid "invalid wrap size: %s"
+msgstr ""
+
+#, c-format
+msgid "extra operand %s"
+msgstr ""
+
+#, c-format
+msgid ""
+"%s %s\n"
+"Copyright 2004, 2005 Simon Josefsson.\n"
+"Base64 comes with NO WARRANTY, to the extent permitted by law.\n"
+"You may redistribute copies of Base64 under the terms of the GNU\n"
+"General Public License.  For more information about these matters,\n"
+"see the file named COPYING.\n"
+msgstr ""
+
+msgid "standard input"
+msgstr ""

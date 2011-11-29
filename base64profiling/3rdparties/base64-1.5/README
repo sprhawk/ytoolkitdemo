@@ -1,0 +1,38 @@
+
+                             B A S E 6 4
+
+               by John Walker (http://www.fourmilab.ch/)
+                             Version 1.5
+                              June 2006
+
+BASE64 is a simple command-line filter which encodes and decodes
+binary files in Base64 encoding as defined in RFC 1341.  For
+details on operation of the program, please consult the manual
+page "base64.1" or its HTML equivalent "index.html" included in
+this distribution.
+
+For information on how to build and install the program, see
+the INSTALL file.  Win32 users may, if they wish, use the
+ready-to-run base64.exe file included in the archive.  Source
+code for this program is written in the CWEB "Literate Programming"
+language in which C source code and TeX internal documentation
+are maintained in a single base64.w file.  CWEB programming tools
+may be downloaded from:
+
+    http://www-cs-faculty.stanford.edu/~knuth/cweb.html
+
+but you do *not* need to install the CWEB tools to build this
+program; a ready-to-compile C program is included.  An annotated
+source code listing is provided in the file base64.pdf, which may
+be read with Acrobat Reader, which is a free download from:
+
+    http://www.adobe.com/products/acrobat/readstep.html
+
+The latest version of this program may be downloaded
+from:
+
+    http://www.fourmilab.ch/webtools/base64/
+
+Please report any bugs or documentation errors to:
+
+    bugs@fourmilab.ch

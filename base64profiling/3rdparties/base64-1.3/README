@@ -1,0 +1,19 @@
+BASE64 README -- Important introductory notes.
+Copyright (C) 2005 Simon Josefsson
+See the end for copying conditions.
+
+This directory holds Base64, which is small command line utility that
+implement the base64 encoding algorithm.
+
+This package is designed so that it should build on any platform that
+has a C89 compiler.  It can take advantage of certain features on
+POSIX platforms, but they are optional.
+
+Base64 is licensed under the GNU General Public License, see COPYING.
+
+For updates to the project, see <http://josefsson.org/base64/>.
+
+----------------------------------------------------------------------
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.

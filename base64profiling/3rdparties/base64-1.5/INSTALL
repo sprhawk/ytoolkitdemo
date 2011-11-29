@@ -1,0 +1,25 @@
+
+To build and install this program on Unix-like systems:
+
+    1.  cd to the directory in which you unpacked this distribution.
+
+    2.  Configure the program for your system by running:
+            ./configure
+        This will create a Makefile and config.h appropriate for
+        your system.
+
+    3.  Build the program with:
+            make
+
+    4.  Test the results with:
+            make check
+        For a more demanding test run:
+            make wringer
+
+    5.  To preview where the program will be installed, use:
+            make -n install
+        To install the executable and manual page in the
+        destinations shown by the above command:
+            make install
+        Depending on permissions of the destination directories,
+        you may need to be super-user to perform the installation.
