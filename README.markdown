@@ -16,6 +16,8 @@ It includes:
 * [Facebook] authentication and data retieving (OAuth 2.0)
 * [live] not finished.
 
+* [Base64 profiling] my implementation benchmark comparision to GNUCoreUtils base64, NSData+Base64 and libb64.
+
 [Twitter]: http://www.twitter.com
 [Douban]: http://www.douban.com
 [QQ weibo]: http://t.qq.com
