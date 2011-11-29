@@ -71,7 +71,7 @@
                                        tokenSecret:nil
                                              realm:kDoubanRealm
                                           verifier:nil
-                                            callback:nil];
+                                          callback:nil];
     [NSURLConnection connectionWithRequest:request delegate:self];
     _step = 0;
     

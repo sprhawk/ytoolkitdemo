@@ -13,13 +13,13 @@
 		9A5385641484BA5300B31576 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A5385621484BA5300B31576 /* InfoPlist.strings */; };
 		9A5385661484BA5300B31576 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385651484BA5300B31576 /* main.m */; };
 		9A53856A1484BA5300B31576 /* YAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385691484BA5300B31576 /* YAppDelegate.m */; };
-		9A53856F1484BAC000B31576 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A53856E1484BAC000B31576 /* example.png */; };
 		9A5385C51484BBE300B31576 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385C31484BBE300B31576 /* base64.c */; };
 		9A5385C81484BBF000B31576 /* cdecode.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385C61484BBF000B31576 /* cdecode.c */; };
 		9A5385C91484BBF000B31576 /* cencode.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385C71484BBF000B31576 /* cencode.c */; };
 		9A5385D71484BC2E00B31576 /* libybase64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB952E1483A87B007E22DF /* libybase64.a */; };
 		9A5385D81484BC2E00B31576 /* libybase64additions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB95301483A87B007E22DF /* libybase64additions.a */; };
 		9A5385D91484BD4900B31576 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385D01484BC0A00B31576 /* NSData+Base64.m */; };
+		9A5385F61484C93D00B31576 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A53856E1484BAC000B31576 /* example.png */; };
 		9AABEA39147FB37C00A678B3 /* TwitterClientCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABEA38147FB37C00A678B3 /* TwitterClientCredentials.m */; };
 		9AABEA3C147FB3FD00A678B3 /* TwitterTimelineListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABEA3B147FB3FD00A678B3 /* TwitterTimelineListViewController.m */; };
 		9AC0C4D6147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C4D4147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m */; };
@@ -938,6 +938,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A5385641484BA5300B31576 /* InfoPlist.strings in Resources */,
+				9A5385F61484C93D00B31576 /* example.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -953,7 +954,6 @@
 				9AEB94AD14822F54007E22DF /* SinaweiboOAuthv1LoginViewController.xib in Resources */,
 				9AEB94C814829AAA007E22DF /* QQweiboOAuthv1LoginViewController.xib in Resources */,
 				9AEB94FA1482BB3F007E22DF /* FlickrLoginViewController.xib in Resources */,
-				9A53856F1484BAC000B31576 /* example.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
