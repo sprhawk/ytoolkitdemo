@@ -36,10 +36,10 @@ How to build it ?
 
 ```
     $ git submodule init
-    $ git submodule update
+    $ git submodule update --recursive
 ```
 
-   submodule includes: [ytoolkit], [SBJson], and [ASIHTTPRequest]
+   submodules includes: [ytoolkit], [SBJson], [HTTPRequestWrapper] and [ASIHTTPRequest]
 3. Open the project, if you are using a iOS is 5.0 earlier, you MUST change SBJson-ios lib's ARC setting to '**NO**'
 
 4. Register and apply your own API key/secret, in the corresponding ClientCredentials.m
@@ -49,6 +49,7 @@ How to build it ?
 
 [ASIHTTPRequest]: https://github.com/pokeb/asi-http-request.git
 [SBJson]: http://stig.github.com/json-framework/
+[HTTPRequestWrapper]: git://github.com/sprhawk/HTTPRequestWrapper.git
 
 License
 -------
