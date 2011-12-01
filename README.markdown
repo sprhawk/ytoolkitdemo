@@ -53,7 +53,7 @@ How to build it ?
 License
 -------
 
-ytoolkitdemo is distributed under FreeBSD license. However, the ytoolkit is under LGPL v3 (except ASIHTTPRequest additions are under FreeBSD license)
+ytoolkitdemo is distributed under BSD license. However, the ytoolkit is under LGPL v3 (except ASIHTTPRequest additions are under BSD license)
 
 
 
