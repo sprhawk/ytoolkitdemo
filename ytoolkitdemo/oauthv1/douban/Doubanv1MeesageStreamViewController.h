@@ -27,9 +27,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ASIHTTPRequest.h"
+#import "HTTPRequestProtocols.h"
 #import "OAuthv1BaseFeedViewController.h"
 
-@interface Doubanv1MeesageStreamViewController : OAuthv1BaseFeedViewController <ASIHTTPRequestDelegate>
+@interface Doubanv1MeesageStreamViewController : OAuthv1BaseFeedViewController <HTTPRequestLevel2DelegateProtocol>
 
 @end
