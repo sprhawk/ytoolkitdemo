@@ -4,6 +4,6 @@
 [submodule "externals/SBJson"]
 	path = externals/SBJson
 	url = https://github.com/stig/json-framework.git
-[submodule "externals/HTTPRequestWrapper"]
-	path = externals/HTTPRequestWrapper
-	url = git://github.com/sprhawk/HTTPRequestWrapper.git
+[submodule "externals/ASIHTTPRequest"]
+	path = externals/ASIHTTPRequest
+	url = https://github.com/pokeb/asi-http-request.git

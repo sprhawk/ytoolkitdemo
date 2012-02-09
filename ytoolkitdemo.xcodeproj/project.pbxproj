@@ -20,8 +20,6 @@
 		9A5385D81484BC2E00B31576 /* libybase64additions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB95301483A87B007E22DF /* libybase64additions.a */; };
 		9A5385D91484BD4900B31576 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5385D01484BC0A00B31576 /* NSData+Base64.m */; };
 		9A5385F61484C93D00B31576 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A53856E1484BAC000B31576 /* example.png */; };
-		9A56265E148786BF001178FE /* ASIHTTPRequestWrapper+YOAuthv1Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A56265D148786BA001178FE /* ASIHTTPRequestWrapper+YOAuthv1Request.m */; };
-		9A762B241487DC22005FA779 /* libASIHTTPRequestWrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A762B231487DC1C005FA779 /* libASIHTTPRequestWrapper.a */; };
 		9AABEA39147FB37C00A678B3 /* TwitterClientCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABEA38147FB37C00A678B3 /* TwitterClientCredentials.m */; };
 		9AABEA3C147FB3FD00A678B3 /* TwitterTimelineListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABEA3B147FB3FD00A678B3 /* TwitterTimelineListViewController.m */; };
 		9AC0C4D6147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0C4D4147E99BB008E5AD5 /* DoubanOAuthv1LoginViewController.m */; };
@@ -99,13 +97,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9A0991DA147BA274005FBF4B;
 			remoteInfo = ybase64additions;
-		};
-		9A762B221487DC1C005FA779 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A762B1B1487DC1C005FA779 /* HTTPRequestWrapper.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9A56252714876355001178FE;
-			remoteInfo = ASIHTTPRequestWrapper;
 		};
 		9AEB952D1483A87B007E22DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -240,10 +231,6 @@
 		9A5385CF1484BBF700B31576 /* encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = encode.h; sourceTree = "<group>"; };
 		9A5385D01484BC0A00B31576 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "3rdparties/NSData+Base64.m"; sourceTree = "<group>"; };
 		9A5385D11484BC0A00B31576 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "3rdparties/NSData+Base64.h"; sourceTree = "<group>"; };
-		9A56265C148786BA001178FE /* ASIHTTPRequestWrapper+YOAuthv1Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ASIHTTPRequestWrapper+YOAuthv1Request.h"; path = "../ytoolkit/externals/asi-http-request additions/ASIHTTPRequestWrapper+YOAuthv1Request.h"; sourceTree = "<group>"; };
-		9A56265D148786BA001178FE /* ASIHTTPRequestWrapper+YOAuthv1Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ASIHTTPRequestWrapper+YOAuthv1Request.m"; path = "../ytoolkit/externals/asi-http-request additions/ASIHTTPRequestWrapper+YOAuthv1Request.m"; sourceTree = "<group>"; };
-		9A5626C714879E19001178FE /* HTTPRequestWrapperOAuthv1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPRequestWrapperOAuthv1.h; path = ../ytoolkit/externals/HTTPRequestWrapperOAuthv1.h; sourceTree = "<group>"; };
-		9A762B1B1487DC1C005FA779 /* HTTPRequestWrapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HTTPRequestWrapper.xcodeproj; path = externals/HTTPRequestWrapper/HTTPRequestWrapper.xcodeproj; sourceTree = "<group>"; };
 		9AABEA37147FB37C00A678B3 /* TwitterClientCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterClientCredentials.h; sourceTree = "<group>"; };
 		9AABEA38147FB37C00A678B3 /* TwitterClientCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterClientCredentials.m; sourceTree = "<group>"; };
 		9AABEA3A147FB3FD00A678B3 /* TwitterTimelineListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTimelineListViewController.h; sourceTree = "<group>"; };
@@ -347,7 +334,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A762B241487DC22005FA779 /* libASIHTTPRequestWrapper.a in Frameworks */,
 				9AEB95931483A9A8007E22DF /* libsbjson-ios.a in Frameworks */,
 				9AEB95941483A9A8007E22DF /* libybase64.a in Frameworks */,
 				9AEB95951483A9A8007E22DF /* libybase64additions.a in Frameworks */,
@@ -439,14 +425,6 @@
 				9A5385CF1484BBF700B31576 /* encode.h */,
 			);
 			path = b64;
-			sourceTree = "<group>";
-		};
-		9A762B1C1487DC1C005FA779 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9A762B231487DC1C005FA779 /* libASIHTTPRequestWrapper.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		9AABEA36147FB36500A678B3 /* twitter */ = {
@@ -578,9 +556,6 @@
 		9AE98C57147D4FDE00D4488F /* ytoolkitdemo */ = {
 			isa = PBXGroup;
 			children = (
-				9A5626C714879E19001178FE /* HTTPRequestWrapperOAuthv1.h */,
-				9A56265C148786BA001178FE /* ASIHTTPRequestWrapper+YOAuthv1Request.h */,
-				9A56265D148786BA001178FE /* ASIHTTPRequestWrapper+YOAuthv1Request.m */,
 				9ADD1F9714848F330020F044 /* ASIHTTPRequest+YOAuthv1Request.m */,
 				9ADD1F9814848F330020F044 /* ASIHTTPRequest+YOAuthv1Request.h */,
 				9AC0C566147F3EBD008E5AD5 /* DemoListViewController.h */,
@@ -610,7 +585,6 @@
 		9AE98CA0147D616200D4488F /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				9A762B1B1487DC1C005FA779 /* HTTPRequestWrapper.xcodeproj */,
 				9AEB95811483A990007E22DF /* SBJson.xcodeproj */,
 				9AEB951B1483A87A007E22DF /* ytoolkit.xcodeproj */,
 			);
@@ -765,10 +739,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9A762B1C1487DC1C005FA779 /* Products */;
-					ProjectRef = 9A762B1B1487DC1C005FA779 /* HTTPRequestWrapper.xcodeproj */;
-				},
-				{
 					ProductGroup = 9AEB95821483A990007E22DF /* Products */;
 					ProjectRef = 9AEB95811483A990007E22DF /* SBJson.xcodeproj */;
 				},
@@ -791,13 +761,6 @@
 			fileType = archive.ar;
 			path = libycocoaadditions.a;
 			remoteRef = 9A11169F14AD5D3D0090A4BC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9A762B231487DC1C005FA779 /* libASIHTTPRequestWrapper.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libASIHTTPRequestWrapper.a;
-			remoteRef = 9A762B221487DC1C005FA779 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		9AEB952E1483A87B007E22DF /* libybase64.a */ = {
@@ -991,7 +954,6 @@
 				9AEB94F51482BA53007E22DF /* FlickrListViewController.m in Sources */,
 				9AEB94F91482BB3F007E22DF /* FlickrLoginViewController.m in Sources */,
 				9ADD1F9914848F330020F044 /* ASIHTTPRequest+YOAuthv1Request.m in Sources */,
-				9A56265E148786BF001178FE /* ASIHTTPRequestWrapper+YOAuthv1Request.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
