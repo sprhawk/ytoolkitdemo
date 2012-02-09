@@ -27,9 +27,7 @@
 
 #import "Doubanv1MeesageStreamViewController.h"
 #import <ytoolkit/ymacros.h>
-#import "ASIHTTPRequestWrapper+YOAuthv1Request.h"
-#import "HTTPRequestWrapperOAuthv1.h"
-
+#import "ASIHTTPRequest+YOAuthv1Request.h"
 #import "DoubanClientCredentials.h"
 #import <SBJson/SBJson.h>
 #import "DoubanOAuthv1LoginViewController.h"
@@ -85,7 +83,7 @@
 {
     if (self.accesstoken && self.tokensecret) {
         NSURL * url = [NSURL URLWithString:@"http://api.douban.com/people/%40me/miniblog?alt=json"];
-        HTTPRequest2OAuthv1 request = requestLevel1ForURL(url);
+        ASIHTTPRequest * request = [ASIHTTPRequest requestWithURL:url];
         request.delegate = self;
         [request prepareOAuthv1RequestUsingConsumerKey:kDoubanConsumerKey
                                      consumerSecretKey:kDoubanConsumerSecretKey
@@ -104,8 +102,7 @@
 }
 
 
-- (void)requestDidFinishLoading:(HTTPRequestLevel2)request
-{
+- (void)requestFinished:(ASIHTTPRequest *)request {
     YLOG(@"response:%@", request.responseString);
     id value = [request.responseString JSONValue];
     if (YIS_INSTANCE_OF(value, NSDictionary)) {
@@ -125,10 +122,9 @@
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
-- (void)request:(HTTPRequestLevel2)request didFailWithError:(NSError *)error
-{
+- (void)requestFailed:(ASIHTTPRequest *)request {
     UIAlertView * alertView = [[[UIAlertView alloc] initWithTitle:[[self class] description]
-                                                         message:[error localizedDescription]
+                                                         message:[request.error localizedDescription]
                                                         delegate:nil
                                                cancelButtonTitle:@"OK"
                                                 otherButtonTitles:nil] autorelease];
