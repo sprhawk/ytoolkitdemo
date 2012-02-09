@@ -107,43 +107,87 @@
 
 #define ACCESSTOKEN_KEY @"sinaweiboaccesstoken"
 #define REFRESHTOKEN_KEY  @"sinaweiborefreshtoken"
+#define EXPIRESIN_KEY @"sinaweiboexpiresin"
+#define TOKENTIMESTAMP_KEY @"sinaweibotokentimestamp"
+
 
 - (void)setAccesstoken:(NSString *)accesstoken {
-    [super setAccesstoken:accesstoken];
-    if ([super accesstoken]) {
-        [[NSUserDefaults standardUserDefaults] setObject:self.accesstoken forKey:ACCESSTOKEN_KEY];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
+  [super setAccesstoken:accesstoken];
+  if ([super accesstoken]) {
+    [[NSUserDefaults standardUserDefaults] setObject:[super accesstoken] forKey:ACCESSTOKEN_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+  }
 }
 
 - (NSString *)accesstoken {
-    
-    NSString * token = [super accesstoken];
-    if (nil == token) {
-        token = [[NSUserDefaults standardUserDefaults] objectForKey:ACCESSTOKEN_KEY];
-        self.accesstoken = token;
+  
+  NSString * token = [super accesstoken];
+  if (nil == token) {
+    token = [[NSUserDefaults standardUserDefaults] objectForKey:ACCESSTOKEN_KEY];
+    if (token) {
+      [super setAccesstoken:token];
     }
-    return token;
+  }
+  return token;
 }
 
 
 - (void)setRefreshtoken:(NSString *)refreshtoken
 {
-    [super setRefreshtoken:refreshtoken];
-    if ([super refreshtoken]) {
-        [[NSUserDefaults standardUserDefaults] setObject:self.refreshtoken forKey:REFRESHTOKEN_KEY];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
+  [super setRefreshtoken:refreshtoken];
+  if ([super refreshtoken]) {
+    [[NSUserDefaults standardUserDefaults] setObject:[super refreshtoken] forKey:REFRESHTOKEN_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+  }
 }
 
 - (NSString *)refreshtoken {
-    
-    NSString * token = [super refreshtoken];
-    if (nil == token) {
-        token = [[NSUserDefaults standardUserDefaults] objectForKey:REFRESHTOKEN_KEY];
-        self.refreshtoken = token;
+  
+  NSString * token = [super refreshtoken];
+  if (nil == token) {
+    token = [[NSUserDefaults standardUserDefaults] objectForKey:REFRESHTOKEN_KEY];
+    if (token) {
+      [super setRefreshtoken:token];
     }
-    return token;
+  }
+  return token;
+}
+
+- (void)setExpiresin:(NSNumber *)expiresin {
+  [super setExpiresin:expiresin];
+  if ([super expiresin]) {
+    [[NSUserDefaults standardUserDefaults] setObject:[super expiresin] forKey:EXPIRESIN_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+  }
+}
+
+- (NSNumber *)expiresin {
+  NSNumber * expiresin = [super expiresin];
+  if (nil == expiresin) {
+    expiresin = [[NSUserDefaults standardUserDefaults] objectForKey:EXPIRESIN_KEY];
+    [super setExpiresin:expiresin];
+  }
+  return expiresin;
+}
+
+- (void)setTokentimestamp:(NSDate *)tokentimestamp {
+  [super setTokentimestamp:tokentimestamp];
+  if ([super tokentimestamp]) {
+    NSTimeInterval t = [tokentimestamp timeIntervalSince1970];
+    NSNumber * timestamp = [NSNumber numberWithFloat:t];
+    [[NSUserDefaults standardUserDefaults] setObject:timestamp forKey:TOKENTIMESTAMP_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+  }
+}
+
+- (NSDate *)tokentimestamp {
+  NSDate * tokentimestamp = [super tokentimestamp];
+  if (nil == tokentimestamp) {
+    NSNumber * timestamp = [[NSUserDefaults standardUserDefaults] objectForKey:TOKENTIMESTAMP_KEY];
+    tokentimestamp = [NSDate dateWithTimeIntervalSince1970:[timestamp floatValue]];
+    [super setTokentimestamp:tokentimestamp];
+  }
+  return tokentimestamp;
 }
 
 @end

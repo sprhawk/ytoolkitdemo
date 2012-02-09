@@ -33,4 +33,5 @@
 @property (nonatomic, copy) NSString * accesstoken;
 @property (nonatomic, copy) NSString * refreshtoken;
 @property (nonatomic, copy) NSNumber * expiresin;
+@property (nonatomic, copy, readwrite) NSDate * tokentimestamp;
 @end

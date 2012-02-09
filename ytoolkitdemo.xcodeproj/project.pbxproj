@@ -79,6 +79,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A11169F14AD5D3D0090A4BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AEB951B1483A87A007E22DF /* ytoolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AED768D1498FECE001074E5;
+			remoteInfo = "ycocoaadditions-MacOSX";
+		};
 		9A5385D31484BC2400B31576 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AEB951B1483A87A007E22DF /* ytoolkit.xcodeproj */;
@@ -681,6 +688,7 @@
 				9AEB95401483A87B007E22DF /* ytoolkit.framework */,
 				9AEB95421483A87B007E22DF /* yoauthadditionsTests.octest */,
 				9AEB95441483A87B007E22DF /* ytoolkitbundle.bundle */,
+				9A1116A014AD5D3D0090A4BC /* libycocoaadditions.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -778,6 +786,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		9A1116A014AD5D3D0090A4BC /* libycocoaadditions.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libycocoaadditions.a;
+			remoteRef = 9A11169F14AD5D3D0090A4BC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9A762B231487DC1C005FA779 /* libASIHTTPRequestWrapper.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;

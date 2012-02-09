@@ -79,16 +79,16 @@
                                                signatureMethod:YOAuthv1SignatureMethodHMAC_SHA1
                                                          realm:nil
                                                       verifier:nil
-                                                      callback:@"http://ytoolkitdemo.yang.me"];
+                                                      callback:kSinaweiboApiCallbackURL];
     //Note: the callback DOES NOT WORK! faint ~_~, even I set the app type to web app type as documented
     _step = 0;
     self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
     [self.activityIndicator startAnimating];
     [request startAsynchronous];
     
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Enter PIN code"
-                                                                              style:UIBarButtonItemStyleBordered
-                                                                             target:self action:@selector(enterPINCode:)] autorelease];
+//    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Enter PIN code"
+//                                                                              style:UIBarButtonItemStyleBordered
+//                                                                             target:self action:@selector(enterPINCode:)] autorelease];
 }
 
 - (void)viewDidUnload
@@ -131,7 +131,7 @@
     
     if (self.accesstoken && self.tokensecret) {
         if (0 == _step) {
-            NSString * url = [NSString stringWithFormat:@"http://api.t.sina.com.cn/oauth/authorize?%@=%@", YOAuthv1OAuthTokenKey, self.accesstoken];
+            NSString * url = [NSString stringWithFormat:@"http://api.t.sina.com.cn/oauth/authorize?%@=%@&oauth_callback=%@", YOAuthv1OAuthTokenKey, self.accesstoken, kSinaweiboApiCallbackURL];
             NSMutableURLRequest * r = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
             [self.webView loadRequest:r];
             self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
@@ -152,6 +152,9 @@
     [alertView show];
     
     YLOG(@"response:%@", request.responseString);
+    NSDictionary * params = [request.responseString decodedUrlencodedParameters];
+    id cn = [params objectForKey:@"error_CN"];
+    YLOG(@"cn:%@", cn);
 }
 
 #pragma mark - UIWebViewDelegate

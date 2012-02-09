@@ -31,12 +31,14 @@
 @synthesize accesstoken = _accesstoken;
 @synthesize refreshtoken = _refreshtoken;
 @synthesize expiresin = _expiresin;
+@synthesize tokentimestamp = _tokentimestamp;
 
 - (void)dealloc
 {
     self.accesstoken = nil;
     self.refreshtoken = nil;
     self.expiresin = nil;
+    self.tokentimestamp = nil;
     [super dealloc];
 }
 
@@ -60,6 +62,7 @@
     self.accesstoken = loginViewController.accesstoken;
     self.refreshtoken = loginViewController.refreshtoken;
     self.expiresin = loginViewController.expiresin;
+  self.tokentimestamp = [NSDate date];
     [self dismissModalViewControllerAnimated:YES];
 }
 

@@ -63,7 +63,7 @@
 #pragma mark - network
 - (void)loadFeedStream {
     if (self.accesstoken && self.tokensecret) {
-        ASIHTTPRequest * request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"https://api.weibo.com/2/statuses/home_timeline.json"]];
+        ASIHTTPRequest * request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://api.t.sina.com.cn/statuses/friends_timeline.json"]];
         request.delegate = self;
         [request prepareOAuthv1AuthorizationHeaderUsingConsumerKey:kSinaweiboApiKey
                                                  consumerSecretKey:kSinaweiboApiSecret
