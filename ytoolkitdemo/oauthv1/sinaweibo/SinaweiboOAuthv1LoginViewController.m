@@ -37,9 +37,6 @@
 @implementation SinaweiboOAuthv1LoginViewController
 @synthesize webView;
 @synthesize activityIndicator;
-@synthesize pincodeField;
-@synthesize pincodeView;
-@synthesize verifier = _verifier;
 
 #pragma mark - View lifecycle
 
@@ -50,12 +47,8 @@
 
 - (void)enterPINCode:(id)sender
 {
-    self.pincodeView.alpha = 0.0f;
-    self.pincodeView.hidden = NO;
-    
     [UIView beginAnimations:@"pincode" context:NULL];
     [UIView setAnimationDuration:1.0f];
-    self.pincodeView.alpha = 1.0f;
     [UIView commitAnimations];
     UIBarButtonItem * item = [[[UIBarButtonItem alloc] initWithTitle:@"Continue" 
                                                                style:UIBarButtonItemStyleBordered
@@ -95,9 +88,6 @@
 {
     [self setWebView:nil];
     [self setActivityIndicator:nil];
-    [self setPincodeField:nil];
-    [self setPincodeView:nil];
-    self.verifier = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -112,9 +102,6 @@
 - (void)dealloc {
     [webView release];
     [activityIndicator release];
-    self.verifier = nil;
-    [pincodeField release];
-    [pincodeView release];
     [super dealloc];
 }
 
@@ -169,19 +156,20 @@
     NSString * host = [s host];
     YLOG(@"load Request to: %@", s);
     //Callback does not work!
-    if ([host isEqualToString:@"ytoolkitdemo.yang.me"]) {
+    if ([host isEqualToString:[kSinaweiboApiCallbackURL host]]) {
         NSDictionary * p = [s queryParameters];
-        self.verifier = [p objectForKey:YOAuthv1OAuthVerifierKey];
+        NSString * verifier = [p objectForKey:YOAuthv1OAuthVerifierKey];
+        NSString * token = [p objectForKey:YOAuthv1OAuthTokenKey];
         ASIHTTPRequest * r = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://api.t.sina.com.cn/oauth/access_token"]];
         [r setRequestMethod:@"POST"];
         r.delegate = self;
         [r prepareOAuthv1AuthorizationHeaderUsingConsumerKey:kSinaweiboApiKey
                                            consumerSecretKey:kSinaweiboApiSecret
-                                                       token:self.accesstoken
+                                                       token:token
                                                  tokenSecret:self.tokensecret
                                              signatureMethod:YOAuthv1SignatureMethodHMAC_SHA1
                                                        realm:nil
-                                                    verifier:self.verifier
+                                                    verifier:verifier
                                                     callback:nil];
         _step = 1;
         self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;

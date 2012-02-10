@@ -34,7 +34,4 @@
 }
 @property (retain, nonatomic) IBOutlet UIWebView *webView;
 @property (retain, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
-@property (retain, nonatomic) IBOutlet UITextField *pincodeField;
-@property (retain, nonatomic) IBOutlet UIView *pincodeView;
-@property (copy, nonatomic) NSString * verifier;
 @end

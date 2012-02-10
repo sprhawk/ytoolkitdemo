@@ -1242,6 +1242,7 @@
 				INFOPLIST_FILE = "ytoolkitdemo/ytoolkitdemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_LDFLAGS = (
+					"-fobjc-arc",
 					"-ObjC",
 					"-all_load",
 				);
@@ -1265,6 +1266,7 @@
 				INFOPLIST_FILE = "ytoolkitdemo/ytoolkitdemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_LDFLAGS = (
+					"-fobjc-arc",
 					"-ObjC",
 					"-all_load",
 				);
